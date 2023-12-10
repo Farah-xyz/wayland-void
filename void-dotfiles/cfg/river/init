@@ -32,7 +32,7 @@ riverctl input $touchpad natural-scroll disabled
 riverctl input $touchpad accel-profile adaptive
 riverctl input $touchpad pointer-accel 0.5
 ## Keyboard
-riverctl keyboard-layout -options "caps:escape,grp:alt_space_toggle" "us,ara"
+riverctl keyboard-layout -options "caps:escape,grp:alt_altgr_toggle" "us,ara"
 riverctl set-repeat 50 200
 
 #==========================#

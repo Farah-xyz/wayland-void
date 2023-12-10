@@ -63,7 +63,7 @@ input "type:touchpad" {
 }
 input "type:keyboard" {
     xkb_layout us,ara
-    xkb_options caps:escape,grp:ctrl_space_toggle
+    xkb_options caps:escape,grp:alts_toggle
     repeat_delay 200
     repeat_rate 50
 }
