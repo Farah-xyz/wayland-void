@@ -1,0 +1,15 @@
+# Auto Generate
+void-dotfiles/cfg/qutebrowser/autoconfig.yml
+void-dotfiles/cfg/qutebrowser/quickmarks
+void-dotfiles/cfg/qutebrowser/greasemonkey/
+void-dotfiles/cfg/qutebrowser/bookmarks/
+void-dotfiles/cfg/mpv/watch_later/
+void-dotfiles/cfg/nnn/bookmarks/
+void-dotfiles/cfg/nnn/sessions/
+void-dotfiles/cfg/nnn/mounts/
+
+# Byte-compiled / optimized / DLL files
+lazy-lock.json
+__pycache__/
+*.pyc
+*.py[cod]

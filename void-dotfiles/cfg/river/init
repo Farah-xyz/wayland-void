@@ -1,0 +1,175 @@
+#!/bin/sh
+#------------------------------------------#
+# First Edit 2023-08-13                    #
+# github.com/farah-xyz/wayland-void        #
+#------------------------------------------#
+#==========================#
+# Variable:                #
+#==========================#
+mod="Mod1"
+mod4="Mod4"
+term="foot"
+termSecond="lxterminal"
+browser="firefox"
+browserVI="qutebrowser"
+menu="fuzzel"
+touchpad="pointer-2-7-SynPS/2_Synaptics_TouchPad"
+
+#==========================#
+# AutoStart:               #
+#==========================#
+riverctl spawn "bash $HOME/.local/wayland-void/void-dotfiles/cfg/river/scripts/autostart.sh"
+riverctl spawn "bash $HOME/.local/wayland-void/void-dotfiles/cfg/river/scripts/gtkTheme.sh"
+riverctl spawn "bash $HOME/.local/wayland-void/void-dotfiles/cfg/river/scripts/idle.sh"
+
+#==========================#
+# Input configurations:    #
+#==========================#
+## Touchpad
+riverctl input $touchpad tap enabled
+riverctl input $touchpad events enabled
+riverctl input $touchpad natural-scroll disabled
+riverctl input $touchpad accel-profile adaptive
+riverctl input $touchpad pointer-accel 0.5
+## Keyboard
+riverctl keyboard-layout -options "caps:escape,grp:alt_space_toggle" "us,ara"
+riverctl set-repeat 50 200
+
+#==========================#
+# Misc configurations:     #
+#==========================#
+riverctl border-width 3
+riverctl set-cursor-warp on-focus-change
+riverctl focus-follows-cursor normal
+riverctl hide-cursor timeout 5000
+riverctl hide-cursor when-typing enabled
+
+#==========================#
+# Layouts configurations:  #
+#==========================#
+riverctl attach-mode top
+riverctl default-layout rivertile
+rivertile -view-padding 2 -outer-padding 2 -main-count 1 -main-ratio 0.6 -main-location left &
+
+#==========================#
+# window colours:          #
+#==========================#
+riverctl background-color 0x1d2021
+riverctl border-color-focused 0xd79921
+riverctl border-color-unfocused 0x282828
+riverctl border-color-urgent 0xcc241d
+
+#==========================#
+# window Rules:            #
+#==========================#
+riverctl float-filter-add app-id mpv
+riverctl float-filter-add app-id imv
+riverctl float-filter-add app-id pavucontrol
+riverctl float-filter-add app-id floatfoot
+
+#==========================#
+# Key Bindings:            #
+#==========================#
+# Programme Bindings:      #
+#==========================#
+riverctl map normal $mod Return    spawn $term
+riverctl map normal $mod Backslash spawn $termSecond
+riverctl map normal $mod+Shift   W spawn $browserVI
+riverctl map normal $mod   W       spawn $browser
+riverctl map normal $mod   D       spawn $menu
+riverctl map normal $mod   N       spawn "$term nnn"
+riverctl map normal $mod   X       spawn "pkill -SIGUSR1 waybar"
+riverctl map normal $mod+Shift Return spawn "$term --app-id=floatfoot"
+riverctl map normal $mod+Control P    spawn "bash $HOME/.local/wayland-void/void-dotfiles/cfg/river/scripts/powerMenu.sh"
+riverctl map normal $mod+Control R    spawn "$HOME/.config/river/init"
+# Screenshoot Binding:     #
+#==========================#
+riverctl map normal $mod Print         spawn 'shotman --capture output'
+riverctl map normal $mod+Shift Print   spawn 'shotman --capture region'
+# Window Bindings:         #
+#==========================#
+riverctl map normal $mod F toggle-fullscreen
+riverctl map normal $mod+Shift Space toggle-float
+riverctl map normal $mod+Shift C close
+riverctl map normal $mod+Control Q exit
+riverctl map normal $mod J focus-view next
+riverctl map normal $mod K focus-view previous
+riverctl map normal $mod Period focus-view next
+riverctl map normal $mod Comma focus-view previous
+riverctl map normal $mod+Shift J swap next
+riverctl map normal $mod+Shift K swap previous
+riverctl map normal $mod+Shift Period swap next
+riverctl map normal $mod+Shift Comma swap previous
+riverctl map normal $mod S zoom
+riverctl map normal $mod+Shift H send-layout-cmd rivertile "main-count +1"
+riverctl map normal $mod+Shift L send-layout-cmd rivertile "main-count -1"
+riverctl map normal $mod+Shift+Control Comma send-layout-cmd rivertile "main-count +1"
+riverctl map normal $mod+Shift+Control Period send-layout-cmd rivertile "main-count -1"
+riverctl map normal $mod H send-layout-cmd rivertile "main-ratio -0.05"
+riverctl map normal $mod L send-layout-cmd rivertile "main-ratio +0.05"
+# Window Floating Bidings: #
+#==========================#
+riverctl map normal $mod4+Shift H move left 100
+riverctl map normal $mod4+Shift J move down 100
+riverctl map normal $mod4+Shift K move up 100
+riverctl map normal $mod4+Shift L move right 100
+riverctl map normal $mod4+Shift+Control H snap left
+riverctl map normal $mod4+Shift+Control J snap down
+riverctl map normal $mod4+Shift+Control K   snap up
+riverctl map normal $mod4+Shift+Control L snap right
+riverctl map normal $mod4+Control H resize horizontal -100
+riverctl map normal $mod4+Control J resize vertical 100
+riverctl map normal $mod4+Control K resize vertical -100
+riverctl map normal $mod4+Control L resize horizontal 100
+# Mouse Binding:           #
+#==========================#
+riverctl map-pointer normal $mod BTN_LEFT move-view
+riverctl map-pointer normal $mod BTN_RIGHT resize-view
+riverctl map-pointer normal $mod BTN_MIDDLE zoom
+riverctl map-pointer normal $mod+Shift BTN_MIDDLE toggle-float
+# Tags Binding:            #
+#==========================#
+for i in $(seq 1 9)
+do
+    tags=$((1 << ($i - 1)))
+    riverctl map normal $mod $i set-focused-tags $tags
+    riverctl map normal $mod+Shift $i set-view-tags $tags
+    riverctl map normal $mod+Control $i toggle-focused-tags $tags
+    riverctl map normal $mod+Shift+Control $i toggle-view-tags $tags
+done
+all_tags=$(((1 << 32) - 1))
+riverctl map normal $mod 0 set-focused-tags $all_tags     # Super+0 to focus all tags
+riverctl map normal $mod+Shift 0 set-view-tags $all_tags  # Super+Shift+0 to tag focused view with all tags
+riverctl map normal $mod Tab  focus-previous-tags
+riverctl map normal $mod+Shift Tab send-to-previous-tags
+# Meltimedia Binding:      #
+#==========================#
+for mode in normal locked
+do
+    # Control pulse audio volume with
+    riverctl map $mode None XF86AudioRaiseVolume  spawn "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"
+    riverctl map $mode None XF86AudioLowerVolume  spawn "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+    riverctl map $mode None XF86AudioMute         spawn "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    riverctl map $mode None XF86AudioMicMute      spawn "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+    # Control MPRIS aware media players with playerctl
+    riverctl map $mode None XF86AudioMedia        spawn "playerctl play-pause"
+    riverctl map $mode None XF86AudioPlay         spawn "playerctl play-pause"
+    riverctl map $mode None XF86AudioPrev         spawn "playerctl previous"
+    riverctl map $mode None XF86AudioNext         spawn "playerctl next"
+    # Control screen backlight brightness with brightnessctl
+    riverctl map $mode None XF86MonBrightnessUp   spawn "doas brightnessctl set +5%"
+    riverctl map $mode None XF86MonBrightnessDown spawn "doas brightnessctl set 5%-"
+done
+# Mode Binding:            #
+#==========================#
+riverctl declare-mode passthrough
+riverctl map normal $mod F11 enter-mode passthrough
+riverctl map passthrough $mod F11 enter-mode normal
+# Layouts Binding:         #
+#==========================#
+riverctl map normal $mod+Control Comma  send-layout-cmd rivertile "main-location left"
+riverctl map normal $mod+Control Period send-layout-cmd rivertile "main-location right"
+riverctl map normal $mod+Control Up     send-layout-cmd rivertile "main-location top"
+riverctl map normal $mod+Control Right  send-layout-cmd rivertile "main-location right"
+riverctl map normal $mod+Control Down   send-layout-cmd rivertile "main-location bottom"
+riverctl map normal $mod+Control Left   send-layout-cmd rivertile "main-location left"
