@@ -47,6 +47,9 @@ eval "$(starship init bash)"
 #####################################
 ###------------ ALIASES ----------###
 #####################################
+# Changing cp & mv to cpg & mvg
+alias cp="cpg -rfg"
+alias mv="mvg -fg"
 # Changing "ls" to "eza"
 alias ls="eza --long --group --icons=auto --git --sort=name --group-directories-first"
 alias ll="eza --long --group --icons=auto --git --sort=name --group-directories-first"
