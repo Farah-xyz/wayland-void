@@ -26,6 +26,7 @@ require("lazy").setup({
     { "nvim-telescope/telescope.nvim"},
     { "akinsho/bufferline.nvim" },
     { "lukas-reineke/indent-blankline.nvim" },
+    { "echasnovski/mini.indentscope" },
     { "tpope/vim-surround" },
     { "tpope/vim-commentary" },
     { "tpope/vim-fugitive" },
