@@ -17,6 +17,8 @@ require("lazy").setup({
     { "nvim-lua/plenary.nvim" },
     { "nvim-tree/nvim-web-devicons" },
     {"goolord/alpha-nvim", event = "VimEnter"},
+    { "stevearc/dressing.nvim", event = "VeryLazy"},
+    { "akinsho/toggleterm.nvim" },
     { "ellisonleao/gruvbox.nvim" },
     { "nvim-lualine/lualine.nvim" },
     { "nvim-tree/nvim-tree.lua" },
