@@ -4,7 +4,7 @@ sudo xbps-install -Sy base-devel xtools mesa-dri vulkan-loader mesa-vulkan-intel
     qutebrowser firefox foot lxterminal fuzzel shotman swappy fnott obs xdg-desktop-portal-wlr \
     font-awesome dejavu-fonts-ttf noto-fonts-ttf noto-fonts-ttf-extra noto-fonts-cjk noto-fonts-emoji \
     pcmanfm nnn udiskie imv mpv yt-dlp aria2 ffmpeg libsixel-util zathura zathura-pdf-mupdf \
-    neovim lazygit fzf fd jq eza bat wl-clipboard trash-cli man-db brightnessctl ImageMagick calcurse \
+    neovim lazygit fzf fd zoxide jq eza bat wl-clipboard trash-cli man-db brightnessctl ImageMagick calcurse \
     gvfs gvfs-mtp gvfs-smb gvfs-afc gvfs-gphoto2 \
     NetworkManager network-manager-applet \
     bluez libspa-bluetooth blueman \
