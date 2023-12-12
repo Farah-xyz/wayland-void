@@ -122,7 +122,7 @@ export NNN_COLORS="2136"
 export NNN_CONTEXT_COLORS="5132"
 export NNN_USE_EDITOR=1
 export NNN_TRASH=1
-export NNN_PLUG='c:fzcd;o:fzopen;i:imgview'
+export NNN_PLUG='n:bulknew;z:autojump;c:fzcd;o:fzopen;l:imgview;u:nmount;a:mtpmount'
 
 #####################################
 ###-----Source fzf keybindingd----###
