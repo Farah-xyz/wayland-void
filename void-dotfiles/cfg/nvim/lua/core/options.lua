@@ -1,12 +1,11 @@
 -----------------------------------------------------------
 -- General Neovim settings and configuration
 -----------------------------------------------------------
-local g = vim.g       -- Global variables
 local opt = vim.opt   -- Set options (global/buffer/windows-scoped)
 -----------------------------------------------------------
 -- General
 -----------------------------------------------------------
-vim.o.background = "dark"               -- or "light" for light mode
+opt.background = "dark"               -- or "light" for light mode
 opt.termbidi = true                     -- For writing in right to left languages like arabic
 opt.mouse = 'a'                         -- Enable mouse support
 opt.clipboard = 'unnamedplus'           -- Copy/paste to system clipboard
@@ -17,7 +16,7 @@ opt.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete options
 -- Neovim UI
 -----------------------------------------------------------
 opt.number = true                       -- Show line number
-opt.numberwidth = 5                     -- Show line number
+opt.numberwidth = 4                     -- Show line number
 opt.cursorline = true                   -- highlight current line
 opt.showmatch = true                    -- Highlight matching parenthesis
 opt.foldmethod = 'marker'               -- Enable folding (default 'foldmarker')
