@@ -60,12 +60,19 @@ alias lt="eza --long --group --icons=auto --git --only-dirs --tree --level=3 --s
 alias v="nvim"
 alias vi="nvim"
 alias nv="nvim"
+alias vn="nvim"
 alias vim="nvim"
+# Github Tools
+alias g="git"
+alias gs="g status"
+alias gm="g commit -m"
+alias gd="g diff"
+alias gp="g push -uf origin main"
+alias lg="lazygit"
 # Img Viewr libsixel
 alias sx="img2sixel --width=20% --height=20%"
-alias lsx="lsix"
-# Others Tools
-alias lg="lazygit"
+alias sxl="lsix"
+alias sxg="imv"
 ## Xbps Pkg Manager
 alias pu="doas xbps-install -Su xbps && doas xbps-install -u"
 alias pi="doas xbps-install -S"
