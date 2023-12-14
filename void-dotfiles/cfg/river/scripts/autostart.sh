@@ -7,7 +7,7 @@ dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=r
 # Background & Bar:        #
 #==========================#
 brightnessctl set 100% &
-wbg ~/pix/FANTASY.png &
+wbg ~/pix/FLOWER.png &
 pkill waybar;waybar &
 #==========================#
 #  APP Daemon:             #

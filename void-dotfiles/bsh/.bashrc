@@ -52,9 +52,6 @@ eval "$(zoxide init bash)"
 #####################################
 ###------------ ALIASES ----------###
 #####################################
-# Changing cp & mv to cpg & mvg
-alias cp="cpg -rfg"
-alias mv="mvg -fg"
 # Changing "ls" to "eza"
 alias ls="eza --long --group --icons=auto --git --sort=name --group-directories-first"
 alias ll="eza --long --group --icons=auto --git --sort=name --group-directories-first"
@@ -122,7 +119,7 @@ export NNN_COLORS="2136"
 export NNN_CONTEXT_COLORS="5132"
 export NNN_USE_EDITOR=1
 export NNN_TRASH=1
-export NNN_PLUG='n:bulknew;z:autojump;c:fzcd;o:fzopen;l:imgview;u:nmount;a:mtpmount'
+export NNN_PLUG='n:bulknew;z:autojump;l:imgview;u:nmount;a:mtpmount'
 
 #####################################
 ###-----Source fzf keybindingd----###
