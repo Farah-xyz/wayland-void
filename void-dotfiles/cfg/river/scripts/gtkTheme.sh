@@ -2,7 +2,7 @@
 
 ## Set GTK Themes, Icons, Cursor and Fonts
 THEME='Gruvbox-Dark'
-ICONS='Reversal-black-dark'
+ICONS='Reversal-black'
 FONT='JetBrainsMono Nerd Font 10'
 CURSOR='Catppuccin-cursor'
 SCHEMA='gsettings set org.gnome.desktop.interface'
