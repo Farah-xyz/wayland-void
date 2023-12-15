@@ -126,7 +126,7 @@ export NNN_COLORS="2136"
 export NNN_CONTEXT_COLORS="5132"
 export NNN_USE_EDITOR=1
 export NNN_TRASH=1
-export NNN_PLUG='n:bulknew;z:autojump;l:imgview;u:nmount;a:mtpmount'
+export NNN_PLUG='n:bulknew;z:autojump;l:imgview;u:nmount;a:mtpmount;o:xdgdefault'
 
 #####################################
 ###-----Source fzf keybindingd----###
