@@ -19,8 +19,8 @@ map('n', '<C-j>', '<C-w>j')
 map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
 -- Fast saving & Quite Nvim
-map('n', '<leader>w', ':w<cr>')
-map('n', '<leader>q', ':q!<cr>')
+map('n', '<leader>ww', ':w<cr>')
+map('n', '<leader>qq', ':qa!<cr>')
 -- Fuzzy Finder
 map('n', '<leader>ff', ':lua require("telescope.builtin").find_files()<cr>')
 map('n', '<leader>fo', ':lua require("telescope.builtin").oldfiles()<cr>')

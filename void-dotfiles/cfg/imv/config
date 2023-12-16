@@ -1,7 +1,7 @@
 [options]
 background = 1d2021
-width = 1720
-height = 880
+width = 1400
+height = 800
 overlay_font = JetBrainsMono Nerd Font:14
 overlay_text_color = 202325
 overlay_text_alpha = e6
