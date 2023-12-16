@@ -65,6 +65,7 @@ alias vim="nvim"
 # Github Tools
 alias g="git"
 alias gs="g status"
+alias ga="g add -A"
 alias gm="g commit -m"
 alias gd="g diff"
 alias gp="g push -uf origin main"

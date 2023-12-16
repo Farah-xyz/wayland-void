@@ -12,6 +12,7 @@ term="foot"
 termSecond="lxterminal"
 browser="firefox"
 browserVI="qutebrowser"
+fileManager="pcmanfm"
 menu="fuzzel"
 touchpad="pointer-2-7-SynPS/2_Synaptics_TouchPad"
 
@@ -77,6 +78,7 @@ riverctl map normal $mod Backslash spawn $termSecond
 riverctl map normal $mod+Shift   W spawn $browserVI
 riverctl map normal $mod   W       spawn $browser
 riverctl map normal $mod   D       spawn $menu
+riverctl map normal $mod   P       spawn $fileManager
 riverctl map normal $mod   N       spawn "$term nnn"
 riverctl map normal $mod   X       spawn "pkill -SIGUSR1 waybar"
 riverctl map normal $mod+Shift Return spawn "$term --app-id=floatfoot"
