@@ -86,8 +86,8 @@ riverctl map normal $mod+Control P    spawn "bash $HOME/.local/wayland-void/void
 riverctl map normal $mod+Control R    spawn "$HOME/.config/river/init"
 # Screenshoot Binding:     #
 #==========================#
-riverctl map normal $mod Print         spawn 'shotman --capture output'
-riverctl map normal $mod+Shift Print   spawn 'shotman --capture region'
+riverctl map normal $mod Print         spawn 'shotman --copy --capture output'
+riverctl map normal $mod+Shift Print   spawn 'shotman --copy --capture region'
 # Window Bindings:         #
 #==========================#
 riverctl map normal $mod F toggle-fullscreen
