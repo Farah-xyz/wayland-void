@@ -158,7 +158,6 @@ bind "set completion-ignore-case on"
 #####################################
 ###---------- System Path  -------###
 #####################################
-PATH="$PATH:/sbin:${HOME}/.local/bin:${HOME}/.config/bin"
 NPM_PACKAGES="${HOME}/.local/share/npm-packages"
-export PATH="$PATH:$NPM_PACKAGES/bin"
+export PATH="$PATH:$HOME/.config/bin:$HOME/.cargo/bin:$HOME/.local/bin:$NPM_PACKAGES/bin"
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"

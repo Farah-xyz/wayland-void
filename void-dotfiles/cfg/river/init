@@ -65,8 +65,9 @@ riverctl border-color-urgent 0xcc241d
 #==========================#
 riverctl float-filter-add app-id mpv
 riverctl float-filter-add app-id imv
+riverctl float-filter-add app-id nnn
 riverctl float-filter-add app-id pavucontrol
-riverctl float-filter-add app-id floatfoot
+riverctl float-filter-add app-id floating
 
 #==========================#
 # Key Bindings:            #
@@ -79,9 +80,9 @@ riverctl map normal $mod+Shift   W spawn $browserVI
 riverctl map normal $mod   W       spawn $browser
 riverctl map normal $mod   D       spawn $menu
 riverctl map normal $mod   P       spawn $fileManager
-riverctl map normal $mod   N       spawn "$term nnn"
+riverctl map normal $mod   N       spawn "$term --app-id=nnn nnn"
 riverctl map normal $mod   X       spawn "pkill -SIGUSR1 waybar"
-riverctl map normal $mod+Shift Return spawn "$term --app-id=floatfoot"
+riverctl map normal $mod+Shift Return spawn "$term --app-id=floating"
 riverctl map normal $mod+Control P    spawn "bash $HOME/.local/wayland-void/void-dotfiles/cfg/river/scripts/powerMenu.sh"
 riverctl map normal $mod+Control R    spawn "$HOME/.config/river/init"
 # Screenshoot Binding:     #
