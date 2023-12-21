@@ -7,7 +7,7 @@ export QT_QPA_PLATFORM=wayland
 export QT_QPA_PLATFORMTHEME=qt5ct
 export GDK_BACKEND=wayland,x11
 export XDG_SESSION_TYPE=wayland
-export XDG_CURRENT_DESKTOP=sway
+export XDG_CURRENT_DESKTOP=river
 
 ####################################
 ####---------- EXPORTS ----------###

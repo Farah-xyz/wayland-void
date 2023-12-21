@@ -76,9 +76,10 @@ sudo ln -s /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d
 # Using doas Like sudo Without Password: #
 #========================================#
 sudo bash -c  "echo 'permit nopass lli as root' > /etc/doas.conf"
-# Use Plugins In NNN File Manager: #
+# Added Execute To Binary File:    #
 #==================================#
 sudo chmod +x ~/.local/wayland-void/void-dotfiles/bin/*
+sudo chmod +x ~/.local/wayland-void/void-dotfiles/cfg/river/scripts/*
 sudo chmod +x ~/.local/wayland-void/void-dotfiles/cfg/nnn/plugins/*
 
 echo "########################################"
