@@ -1,13 +1,13 @@
 ####################################
 ####---------- WAYLAND ----------###
 ####################################
-export MOZ_ENABLE_WAYLAND=1
-export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-export QT_QPA_PLATFORM=wayland
-export QT_QPA_PLATFORMTHEME=qt5ct
-export GDK_BACKEND=wayland,x11
 export XDG_SESSION_TYPE=wayland
 export XDG_CURRENT_DESKTOP=river
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_QPA_PLATFORM=wayland
+export GDK_BACKEND=wayland,x11
+export MOZ_ENABLE_WAYLAND=1
 
 ####################################
 ####---------- EXPORTS ----------###
@@ -17,7 +17,6 @@ export BROWSER="firefox"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export MYVIMRC="$HOME/.config/nvim/init.lua"
-export VIMINIT="source $MYVIMRC"
 
 #####################################
 ####---------- APP ENV  ----------###
@@ -128,7 +127,7 @@ export NNN_COLORS="2136"
 export NNN_CONTEXT_COLORS="5132"
 export NNN_USE_EDITOR=1
 export NNN_TRASH=1
-export NNN_PLUG='m:nmount;M:mtpmount;n:bulknew;z:autojump;l:imgview;o:xdgdefault'
+export NNN_PLUG='m:nmount;M:mtpmount;n:bulknew;z:autojump;i:imgview;x:xdgdefault'
 export NNN_BMS="n:$HOME/.config/nvim;d:$HOME/.local/wayland-void/"
 
 #####################################
