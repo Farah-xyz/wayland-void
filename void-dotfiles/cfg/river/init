@@ -132,18 +132,18 @@ riverctl map normal $mod+Shift Comma   swap       previous
 riverctl map normal $mod S             zoom
 # Window Floating Bidings: #
 #==========================#
-# riverctl map normal $mod4+Shift H move left 100
-# riverctl map normal $mod4+Shift J move down 100
-# riverctl map normal $mod4+Shift K move up 100
-# riverctl map normal $mod4+Shift L move right 100
-# riverctl map normal $mod4+Shift+Control H snap left
-# riverctl map normal $mod4+Shift+Control J snap down
-# riverctl map normal $mod4+Shift+Control K   snap up
-# riverctl map normal $mod4+Shift+Control L snap right
-# riverctl map normal $mod4+Control H resize horizontal -100
-# riverctl map normal $mod4+Control J resize vertical 100
-# riverctl map normal $mod4+Control K resize vertical -100
-# riverctl map normal $mod4+Control L resize horizontal 100
+riverctl map -repeat normal $mod4 H move left 100
+riverctl map -repeat normal $mod4 J move down 100
+riverctl map -repeat normal $mod4 K move up 100
+riverctl map -repeat normal $mod4 L move right 100
+riverctl map -repeat normal $mod4+Shift H snap left
+riverctl map -repeat normal $mod4+Shift J snap down
+riverctl map -repeat normal $mod4+Shift K snap up
+riverctl map -repeat normal $mod4+Shift L snap right
+riverctl map -repeat normal $mod4+Control H resize horizontal -100
+riverctl map -repeat normal $mod4+Control J resize vertical 100
+riverctl map -repeat normal $mod4+Control K resize vertical -100
+riverctl map -repeat normal $mod4+Control L resize horizontal 100
 # Mouse Binding:           #
 #==========================#
 riverctl map-pointer normal $mod BTN_LEFT move-view
