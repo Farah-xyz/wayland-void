@@ -2,7 +2,7 @@
 #==========================#
 # For capturing screen:    #
 #==========================#
-dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
 #==========================#
 # Background & Bar:        #
 #==========================#
