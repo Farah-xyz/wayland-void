@@ -76,6 +76,7 @@ riverctl rule-add -app-id "blueman-manager"  float
 riverctl rule-add -app-id "pavucontrol"      float
 # Dimensions Rules:         #
 #==========================#
+riverctl rule-add -app-id "foot_float"       dimensions 1200 800
 riverctl rule-add -app-id "file_manager"     dimensions 800 400
 riverctl rule-add -app-id "blueman-manager"  dimensions 800 400
 riverctl rule-add -app-id "pavucontrol"      dimensions 800 400
