@@ -8,11 +8,12 @@
 #==========================#
 mod="Mod1"
 mod4="Mod4"
-term="foot"
-termSecond="lxterminal"
+terminal="foot"
+terminal_LX="lxterminal"
+file_manager="nnn"
+file_manager_LX="pcmanfm"
 browser="firefox"
-browserVI="qutebrowser"
-fileManager="pcmanfm"
+browser_VI="qutebrowser"
 menu="fuzzel"
 touchpad="pointer-2-7-SynPS/2_Synaptics_TouchPad"
 
@@ -27,11 +28,11 @@ riverctl spawn "bash $HOME/.local/wayland-void/void-dotfiles/cfg/river/scripts/i
 # Input configurations:    #
 #==========================#
 ## Touchpad
-riverctl input $touchpad tap enabled
-riverctl input $touchpad events enabled
+riverctl input $touchpad tap            enabled
+riverctl input $touchpad events         enabled
 riverctl input $touchpad natural-scroll disabled
-riverctl input $touchpad accel-profile adaptive
-riverctl input $touchpad pointer-accel 0.5
+riverctl input $touchpad accel-profile  adaptive
+riverctl input $touchpad pointer-accel  0.5
 ## Keyboard
 riverctl keyboard-layout -options "caps:escape,grp:alt_altgr_toggle" "us,ara"
 riverctl set-repeat 50 200
@@ -39,56 +40,76 @@ riverctl set-repeat 50 200
 #==========================#
 # Misc configurations:     #
 #==========================#
-riverctl border-width 3
-riverctl set-cursor-warp on-focus-change
-riverctl focus-follows-cursor normal
-riverctl hide-cursor timeout 5000
+riverctl border-width            2
+riverctl set-cursor-warp         on-focus-change
+riverctl focus-follows-cursor    normal
+riverctl hide-cursor timeout     5000
 riverctl hide-cursor when-typing enabled
 
 #==========================#
 # Layouts configurations:  #
 #==========================#
-riverctl attach-mode top
-riverctl default-layout rivertile
-rivertile -view-padding 2 -outer-padding 2 -main-count 1 -main-ratio 0.6 -main-location left &
+riverctl  attach-mode    top
+riverctl  default-layout rivertile
+rivertile -view-padding 4 -outer-padding 4 -main-count 1 -main-ratio 0.6 -main-location left &
 
 #==========================#
 # window colours:          #
 #==========================#
-riverctl background-color 0x1d2021
-riverctl border-color-focused 0xd79921
+riverctl background-color       0x1d2021
+riverctl border-color-focused   0xd79921
 riverctl border-color-unfocused 0x1d2021
-riverctl border-color-urgent 0xcc241d
+riverctl border-color-urgent    0xcc241d
 
 #==========================#
 # window Rules:            #
 #==========================#
-riverctl float-filter-add app-id mpv
-riverctl float-filter-add app-id imv
-riverctl float-filter-add app-id nnn
-riverctl float-filter-add app-id pavucontrol
-riverctl float-filter-add app-id floating
+# Fullscreen Rules:        #
+#==========================#
+riverctl rule-add -app-id "mpv"                 fullscreen
+riverctl rule-add -app-id "imv"                 fullscreen
+# Floating Rules:          #
+#==========================#
+riverctl rule-add -app-id "foot_float"          float
+riverctl rule-add -app-id "file_manager"        float
+riverctl rule-add -app-id "blueman-manager"     float
+riverctl rule-add -app-id "pavucontrol"         float
+# Dimensions Rules:         #
+#==========================#
+riverctl rule-add -app-id "blueman-manager"     dimensions 800 400
+riverctl rule-add -app-id "pavucontrol"         dimensions 800 400
+# Position Rules:          #
+#==========================#
+riverctl rule-add -app-id "blueman-manager"     position 1110 50
+riverctl rule-add -app-id "pavucontrol"         position 1110 50
+# Tags Rules:              #
+#==========================#
+riverctl rule-add -app-id "$browser_VI"         tags 3
+
+# Others Rules:            #
+#==========================#
+riverctl rule-add -app-id "*"                   ssd
 
 #==========================#
 # Key Bindings:            #
 #==========================#
 # Programme Bindings:      #
 #==========================#
-riverctl map normal $mod Return    spawn $term
-riverctl map normal $mod Backslash spawn $termSecond
-riverctl map normal $mod+Shift   W spawn $browserVI
-riverctl map normal $mod   W       spawn $browser
-riverctl map normal $mod   D       spawn $menu
-riverctl map normal $mod   P       spawn $fileManager
-riverctl map normal $mod   N       spawn "$term --app-id=nnn nnn"
-riverctl map normal $mod   X       spawn "pkill -SIGUSR1 waybar"
-riverctl map normal $mod+Shift Return spawn "$term --app-id=floating"
-riverctl map normal $mod+Control P    spawn "bash $HOME/.local/wayland-void/void-dotfiles/cfg/river/scripts/powerMenu.sh"
-riverctl map normal $mod+Control R    spawn "$HOME/.config/river/init"
+riverctl map normal $mod Return        spawn $terminal
+riverctl map normal $mod Backslash     spawn $terminal_LX
+riverctl map normal $mod+Shift   W     spawn $browser_VI
+riverctl map normal $mod   W           spawn $browser
+riverctl map normal $mod   D           spawn $menu
+riverctl map normal $mod   P           spawn $file_manager_LX
+riverctl map normal $mod   N           spawn "$terminal --app-id=file_manager $file_manager"
+riverctl map normal $mod   X           spawn "pkill -SIGUSR1 waybar"
+riverctl map normal $mod+Shift Return  spawn "$terminal --app-id=foot_float"
+riverctl map normal $mod+Control P     spawn "bash $HOME/.local/wayland-void/void-dotfiles/cfg/river/scripts/powerMenu.sh"
+riverctl map normal $mod+Control R     spawn "$HOME/.config/river/init"
 # Screenshoot Binding:     #
 #==========================#
-riverctl map normal $mod Print         spawn 'shotman --copy --capture output'
-riverctl map normal $mod+Shift Print   spawn 'shotman --copy --capture region'
+riverctl map normal $mod Print         spawn "shotman --copy --capture output"
+riverctl map normal $mod+Shift Print   spawn "shotman --copy --capture region"
 # Window Bindings:         #
 #==========================#
 riverctl map normal $mod F toggle-fullscreen

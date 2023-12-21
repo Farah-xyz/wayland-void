@@ -62,12 +62,13 @@ alias vi="nvim"
 alias nv="nvim"
 alias vn="nvim"
 alias vim="nvim"
-# Github Tools
+# Github Command
 alias g="git"
 alias gs="g status"
 alias ga="g add -A"
 alias gc="g commit -m"
 alias gd="g diff"
+alias gl="g log"
 alias gp="g push -uf origin main"
 alias lg="lazygit"
 # Img Viewr libsixel
