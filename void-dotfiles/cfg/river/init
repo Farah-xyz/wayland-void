@@ -54,11 +54,11 @@ riverctl default-layout rivertile
 rivertile -view-padding 2 -outer-padding 2 -main-count 1 -main-ratio 0.6 -main-location left &
 
 #==========================#
-# window colours:          #
+# Borders colours:         #
 #==========================#
 riverctl background-color       0x1d2021
 riverctl border-color-focused   0xd79921
-riverctl border-color-unfocused 0x1d2021
+riverctl border-color-unfocused 0x282828
 riverctl border-color-urgent    0xcc241d
 
 #==========================#
