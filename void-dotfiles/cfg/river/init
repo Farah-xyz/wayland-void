@@ -87,8 +87,8 @@ riverctl rule-add -app-id "blueman-manager"  position 1115 45
 riverctl rule-add -app-id "pavucontrol"      position 1115 45
 # Tags Rules:              #
 #==========================#
-riverctl rule-add -app-id "*qutebrowser*"    tags 3
-riverctl rule-add -app-id "*obsproject*"     tags 5
+riverctl rule-add -app-id "*qutebrowser*"    tags 4
+riverctl rule-add -app-id "*obsproject*"     tags 16
 # Others Rules:            #
 #==========================#
 riverctl rule-add -app-id "*"                ssd
@@ -166,6 +166,17 @@ riverctl map normal $mod 0 set-focused-tags $all_tags     # Super+0 to focus all
 riverctl map normal $mod+Shift 0 set-view-tags $all_tags  # Super+Shift+0 to tag focused view with all tags
 riverctl map normal $mod Tab  focus-previous-tags
 riverctl map normal $mod+Shift Tab send-to-previous-tags
+# scratchpads Binding:     #
+#==========================#
+scratch_tag=$((1 << 20 ))
+# Toggle the scratchpad
+riverctl map normal $mod equal toggle-focused-tags ${scratch_tag}
+# Send windows to the scratchpad
+riverctl map normal $mod Minus set-view-tags ${scratch_tag}
+# Set spawn tagmask to ensure new windows don't have the scratchpad tag unless
+# explicitly set.
+all_but_scratch_tag=$(( ((1 << 32) - 1) ^ $scratch_tag ))
+riverctl spawn-tagmask ${all_but_scratch_tag}
 # Meltimedia Binding:      #
 #==========================#
 for mode in normal locked
