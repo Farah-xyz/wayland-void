@@ -38,7 +38,7 @@ ln -sf ~/.local/wayland-void/void-dotfiles/fonts ~/.local/share/
 ln -sf ~/.local/wayland-void/void-dotfiles/icons ~/.local/share/
 ln -sf ~/.local/wayland-void/void-dotfiles/themes ~/.local/share/
 echo "===============> In ~/ <==================="
-ln -sf ~/.local/wayland-void/void-dotfiles/pix ~/
+ln -sf ~/.local/wayland-void/void-dotfiles/pix/wallpapers ~/
 ln -sf ~/.local/wayland-void/void-dotfiles/bsh/.bashrc ~/
 ln -sf ~/.local/wayland-void/void-dotfiles/bsh/.bash_profile ~/
 ln -sf ~/.local/wayland-void/void-dotfiles/bsh/.npmrc ~/

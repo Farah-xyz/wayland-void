@@ -77,12 +77,12 @@ riverctl rule-add -app-id "pavucontrol"      float
 # Dimensions Rules:         #
 #==========================#
 riverctl rule-add -app-id "foot_float"       dimensions 1200 800
-riverctl rule-add -app-id "file_manager"     dimensions 800 400
+riverctl rule-add -app-id "file_manager"     dimensions 1200 800
 riverctl rule-add -app-id "blueman-manager"  dimensions 800 400
 riverctl rule-add -app-id "pavucontrol"      dimensions 800 400
 # Position Rules:          #
 #==========================#
-riverctl rule-add -app-id "file_manager"     position 5 45
+riverctl rule-add -app-id "nm-applet"        position 1400 45
 riverctl rule-add -app-id "blueman-manager"  position 1115 45
 riverctl rule-add -app-id "pavucontrol"      position 1115 45
 # Tags Rules:              #
