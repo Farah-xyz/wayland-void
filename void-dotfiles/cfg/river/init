@@ -87,6 +87,7 @@ riverctl rule-add -app-id "blueman-manager"  position 1115 45
 riverctl rule-add -app-id "pavucontrol"      position 1115 45
 # Tags Rules:              #
 #==========================#
+riverctl rule-add -app-id "pcmanfm"          tags 2
 riverctl rule-add -app-id "*qutebrowser*"    tags 4
 riverctl rule-add -app-id "*obsproject*"     tags 16
 # Others Rules:            #
