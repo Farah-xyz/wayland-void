@@ -31,8 +31,8 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = "nvim_lsp" },
     { name = "luasnip" },
-    { name = "path" },
     { name = "buffer" },
+    { name = "path" },
   }),
  -- configure lspkind for vs-code like pictograms in completion menu
   formatting = {

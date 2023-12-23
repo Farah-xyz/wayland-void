@@ -1,38 +1,95 @@
 -----------------------------------------------------------
 -- Tree
 -----------------------------------------------------------
--- OR setup with some options
--- recommended settings from nvim-tree documentation
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
--- change color for arrows in tree to light blue
-vim.cmd([[ highlight NvimTreeFolderArrowClosed guifg=#3FC5FF ]])
-vim.cmd([[ highlight NvimTreeFolderArrowOpen guifg=#3FC5FF ]])
-
 require("nvim-tree").setup({
-  sort = {
-    sorter = "case_sensitive",
-  },
-  view = {
-    width = 35,
-    relativenumber = true,
-  },
-  renderer = {
-    indent_markers = { enable = true, },
-    icons = {
-      glyphs = {
-        folder = {
-          arrow_closed = "", -- arrow when folder is closed
-          arrow_open = "",   -- arrow when folder is open
-        },
-      },
+    auto_reload_on_write = true,
+    view = {
+        width = 30,
+        side = "left",
+        number = true,
+        relativenumber = true,
     },
-  },
-  filters = {
-    dotfiles = true,
-  },
-  git = {
-    ignore = false,
-  },
+    filters = {
+        dotfiles = true,
+    },
+
+    renderer = {
+        add_trailing = false,
+        group_empty = false,
+        highlight_git = false,
+        full_name = false,
+        highlight_opened_files = "none",
+        highlight_modified = "none",
+        root_folder_label = ":~:s?$?/..?",
+        indent_width = 2,
+
+        indent_markers = {
+            enable = true, -- enables the tree like line
+            inline_arrows = true,
+            icons = {
+                corner = "└",
+                edge = "│",
+                item = "│",
+                bottom = "─",
+                none = " ",
+            },
+        },
+
+        icons = {
+            webdev_colors = true,
+            git_placement = "before",
+            modified_placement = "after",
+            padding = " ",
+            symlink_arrow = " ➛ ",
+            show = {
+                file = true,
+                folder = true,
+                folder_arrow = true,
+                git = true,
+                modified = true,
+            },
+
+            glyphs = {
+                default = "",
+                symlink = "",
+                bookmark = "",
+                modified = "●",
+                folder = {
+                    arrow_closed = "",
+                    arrow_open = "",
+                    default = "",
+                    open = "",
+                    empty = "",
+                    empty_open = "",
+                    symlink = "",
+                    symlink_open = "",
+                },
+
+                git = {
+                    unstaged = "✗",
+                    staged = "✓",
+                    unmerged = "",
+                    renamed = "➜",
+                    untracked = "★",
+                    deleted = "",
+                    ignored = "◌",
+                },
+            },
+        }, -- end of icons rendering
+
+        special_files = {
+            "Cargo.toml",
+            "Makefile",
+            "README.md",
+            "readme.md",
+        },
+        symlink_destination = true,
+    }, -- end of rendering
+
+    ui = {
+        confirm = {
+            remove = true,
+            trash = true,
+        },
+    },
 })

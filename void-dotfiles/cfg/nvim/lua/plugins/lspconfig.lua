@@ -26,31 +26,56 @@ require("mason-lspconfig").setup{
     },
 }
 -----------------------------------------------------------
+-- Neovim Lspsaga
+-----------------------------------------------------------
+local lspsaga = require("lspsaga")
+lspsaga.setup({
+    debug = false,
+    use_saga_diagnostic_sign = true,
+    -- diagnostic sign
+    error_sign = "",
+    warn_sign = "",
+    hint_sign = "",
+    infor_sign = "",
+    diagnostic_header_icon = "   ",
+    -- code action title icon
+    code_action_icon = " ",
+    code_action_prompt = { enable = true, sign = true, sign_priority = 40, virtual_text = true },
+    finder_definition_icon = "  ",
+    finder_reference_icon = "  ",
+    max_preview_lines = 10,
+
+    finder_action_keys = {
+        open = "o",
+        vsplit = "s",
+        split = "i",
+        quit = "q",
+        scroll_down = "<C-f>",
+        scroll_up = "<C-b>",
+    },
+
+    hover = {
+        max_width = 0.7,
+    },
+
+    code_action_keys = { quit = "q", exec = "<CR>" },
+    rename_action_keys = { quit = "<C-c>", exec = "<CR>" },
+    definition_preview_icon = "  ",
+    border_style = "single",
+    rename_prompt_prefix = "➤",
+    server_filetype_map = {},
+    diagnostic_prefix_format = "%d. ",
+})
+-----------------------------------------------------------
 -- Neovim LSP
 -----------------------------------------------------------
-local opts = { noremap = true, silent = true }
-local on_attach = function(client, bufnr)
-    -- Mappings.
-    -- See `:help vim.lsp.*` for documentation on any of the below functions
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wl',
-        '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.format { async = true }<CR>', opts)
-end
-
 -- LSP Configuration
 local lspconfig = require 'lspconfig'
-
+local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+for type, icon in pairs(signs) do
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+end
 -- additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
@@ -58,15 +83,14 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 -- Language
 -----------------------------------------------------------
 -- emmet language server
-lspconfig.emmet_ls.setup {
+lspconfig.emmet_ls.setup({
     capabilities = capabilities,
-    filetypes = { "html" },
-}
--- Html language server
-lspconfig.html.setup {
+    filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+})
+-- html
+lspconfig.html.setup({
     capabilities = capabilities,
-    filetypes = { "html" },
-}
+})
 -- css language server
 lspconfig.cssls.setup {
     capabilities = capabilities,
@@ -74,19 +98,15 @@ lspconfig.cssls.setup {
 -- javascript language server
 lspconfig.eslint.setup {
     capabilities = capabilities,
-    on_attach = on_attach,
 }
 lspconfig.tsserver.setup {
     capabilities = capabilities,
-    on_attach = on_attach,
 }
 -- python language server
 lspconfig.pyright.setup {
     capabilities = capabilities,
-    on_attach = on_attach,
 }
 -- Lua language server
 lspconfig.lua_ls.setup {
     capabilities = capabilities,
-    on_attach = on_attach,
 }

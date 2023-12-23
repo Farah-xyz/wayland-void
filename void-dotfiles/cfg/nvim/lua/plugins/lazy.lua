@@ -20,7 +20,7 @@ require("lazy").setup({
     { "stevearc/dressing.nvim", event = "VeryLazy" },
     { "ggandor/leap.nvim" },
     { "akinsho/toggleterm.nvim" },
-    { "ellisonleao/gruvbox.nvim" },
+    { "sainnhe/gruvbox-material" },
     { "nvim-lualine/lualine.nvim" },
     { "nvim-tree/nvim-tree.lua" },
     { "stevearc/oil.nvim" },
@@ -39,6 +39,7 @@ require("lazy").setup({
     { "nvim-treesitter/nvim-treesitter" },
     -- LSP
     { "neovim/nvim-lspconfig" },
+    { "glepnir/lspsaga.nvim" },
     { "williamboman/mason.nvim" },
     { "williamboman/mason-lspconfig.nvim" },
     -- CMP
