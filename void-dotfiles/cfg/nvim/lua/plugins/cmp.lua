@@ -6,9 +6,18 @@ local cmp = require("cmp")
 local luasnip = require("luasnip")
 local lspkind = require("lspkind")
 cmp.setup({
+  completion = {
+      completeopt = "menu,menuone,preview,noselect",
+  },
   window = {
-    completion = { border = 'rounded', scrollbar = '║', },
-    documentation = { border = nil, scrollbar = '', },
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+  },
+  snippet = {
+      -- REQUIRED - you must specify a snippet engine
+      expand = function(args)
+          luasnip.lsp_expand(args.body) -- For `luasnip` users.
+      end,
   },
   mapping = cmp.mapping.preset.insert({
     ["<C-k>"] = cmp.mapping.select_prev_item(),
@@ -21,12 +30,6 @@ cmp.setup({
     ["<C-e>"] = cmp.mapping.abort(),
     ["<CR>"] = cmp.mapping.confirm({ select = false }),
   }),
- -- configure how nvim-cmp interacts with snippet engine
-  snippet = {
-    expand = function(args)
-      luasnip.lsp_expand(args.body)
-    end,
-  },
   -- sources for autocompletion
   sources = cmp.config.sources({
     { name = "nvim_lsp" },
@@ -41,4 +44,30 @@ cmp.setup({
       ellipsis_char = "...",
     }),
   },
+  -- Set configuration for specific filetype.
+  cmp.setup.filetype('gitcommit', {
+    sources = cmp.config.sources({
+      { name = 'git' }, -- You can specify the `git` source if [you were installed it](https://github.com/petertriho/cmp-git).
+    }, {
+      { name = 'buffer' },
+    })
+  });
+  -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
+  cmp.setup.cmdline({ '/', '?' }, {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = {
+      { name = 'buffer' }
+    }
+  });
+
+  -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+  cmp.setup.cmdline(':', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = cmp.config.sources({
+      { name = 'path' }
+    }, {
+      { name = 'cmdline' }
+    })
+  })
+
 });

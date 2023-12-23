@@ -25,7 +25,7 @@ require("lazy").setup({
     { "nvim-tree/nvim-tree.lua" },
     { "stevearc/oil.nvim" },
     { "nvim-telescope/telescope.nvim" },
-    { "akinsho/bufferline.nvim" },
+    { "romgrk/barbar.nvim" },
     { "lukas-reineke/indent-blankline.nvim" },
     { "echasnovski/mini.indentscope" },
     { "tpope/vim-surround" },
