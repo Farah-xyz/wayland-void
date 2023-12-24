@@ -15,7 +15,6 @@ end
 vim.g.mapleader = ' '
 -- Remapping Escape key
 map("i", "jk", "<Esc>")
-map("n", "jk", "<Esc>")
 map("v", "jk", "<Esc>")
 -- Toggle between window
 map('n', '<C-h>', '<C-w>h')
