@@ -21,6 +21,7 @@ require("lazy").setup({
     { "ggandor/leap.nvim" },
     { "akinsho/toggleterm.nvim" },
     { "sainnhe/gruvbox-material" },
+    { "yamatsum/nvim-cursorline" },
     { "arturgoms/moonbow.nvim" },
     { "nvim-lualine/lualine.nvim" },
     { "nvim-tree/nvim-tree.lua" },
