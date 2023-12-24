@@ -4,7 +4,7 @@
 require("nvim-tree").setup({
     auto_reload_on_write = true,
     view = {
-        width = 40,
+        width = 35,
         side = "left",
         number = true,
         relativenumber = true,

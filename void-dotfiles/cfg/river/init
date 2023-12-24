@@ -200,11 +200,11 @@ riverctl map normal $mod F11 enter-mode passthrough
 riverctl map passthrough $mod F11 enter-mode normal
 # Layouts Binding:         #
 #==========================#
-riverctl map normal $mod+Control H      send-layout-cmd rivertile "main-ratio -0.05"
-riverctl map normal $mod+Control L      send-layout-cmd rivertile "main-ratio +0.05"
-riverctl map normal $mod+Control Comma  send-layout-cmd rivertile "main-count +1"
-riverctl map normal $mod+Control Period send-layout-cmd rivertile "main-count -1"
-riverctl map normal $mod+Control Up     send-layout-cmd rivertile "main-location top"
-riverctl map normal $mod+Control Right  send-layout-cmd rivertile "main-location right"
-riverctl map normal $mod+Control Down   send-layout-cmd rivertile "main-location bottom"
-riverctl map normal $mod+Control Left   send-layout-cmd rivertile "main-location left"
+riverctl map -repeat normal $mod+Control H      send-layout-cmd rivertile "main-ratio -0.05"
+riverctl map -repeat normal $mod+Control L      send-layout-cmd rivertile "main-ratio +0.05"
+riverctl map normal $mod+Control Comma          send-layout-cmd rivertile "main-count +1"
+riverctl map normal $mod+Control Period         send-layout-cmd rivertile "main-count -1"
+riverctl map normal $mod+Control Up             send-layout-cmd rivertile "main-location top"
+riverctl map normal $mod+Control Right          send-layout-cmd rivertile "main-location right"
+riverctl map normal $mod+Control Down           send-layout-cmd rivertile "main-location bottom"
+riverctl map normal $mod+Control Left           send-layout-cmd rivertile "main-location left"

@@ -6,7 +6,7 @@ require("bufferline").setup {
           offsets = {
             {
                 filetype = "NvimTree",
-                text="            FILE EXPLORER           ",
+                text="          FILE EXPLORER           ",
                 separator= true,
                 text_align = "left"
             }
