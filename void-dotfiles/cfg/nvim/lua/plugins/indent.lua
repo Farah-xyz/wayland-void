@@ -33,6 +33,9 @@ require('ibl').setup{
     },
     vim.opt.listchars:append("space: "),
 }
+-----------------------------------------------------------
+-- Mini Indnent
+-----------------------------------------------------------
 require('mini.indentscope').setup{
         -- Which character to use for drawing scope indicator
         symbol = "┃",
