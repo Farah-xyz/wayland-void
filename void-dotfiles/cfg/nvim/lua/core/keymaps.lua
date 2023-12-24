@@ -13,11 +13,17 @@ end
 -----------------------------------------------------------
 -- Rempas leader Keys
 vim.g.mapleader = ' '
--- Move around splits using Ctrl + {h,j,k,l}
+-- Remapping Escape key
+map("i", "jk", "<Esc>")
+map("n", "jk", "<Esc>")
+map("v", "jk", "<Esc>")
+-- Toggle between window
 map('n', '<C-h>', '<C-w>h')
 map('n', '<C-j>', '<C-w>j')
 map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
+-- Unhighlight searched elements
+map("n", "<leader>hl", ":nohlsearch<cr>")
 -- Fast saving & Quite Nvim
 map('n', '<leader>ww', ':w<cr>')
 map('n', '<leader>qq', ':qa!<cr>')
@@ -28,11 +34,11 @@ map('n', '<leader>fo', ':lua require("telescope.builtin").oldfiles()<cr>')
 map('n', '<leader>ee', ':NvimTreeFindFileToggle<CR>')
 map('n', '<leader>eo', ':Oil<CR>')
 -- Buffers Management
-map('n', '<tab>', ':bn<cr>')
-map('n', '<s-tab>', ':bp<cr>')
+map("n", "<Tab>", ":BufferLineCycleNext<cr>")
+map("n", "<S-Tab>", ":BufferLineCyclePrev<cr>")
 -- Git Management
-map('n', '<leader>a', ':Git add --all<cr>')
-map('n', '<leader>s', ':Git status<cr>')
-map('n', '<leader>c', ':Git commit -v -q<cr>')
-map('n', '<leader>p', ':Git push -u origin main<cr>')
-map('n', '<leader>d', ':Git diff<cr>')
+map('n', '<leader>ga', ':Git add --all<cr>')
+map('n', '<leader>gs', ':Git status<cr>')
+map('n', '<leader>gc', ':Git commit -v -q<cr>')
+map('n', '<leader>gp', ':Git push -u origin main<cr>')
+map('n', '<leader>gd', ':Git diff<cr>')
