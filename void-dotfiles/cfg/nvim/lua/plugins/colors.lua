@@ -1,7 +1,10 @@
 -----------------------------------------------------------
 -- Colorscheme
 -----------------------------------------------------------
--- Default options:
+-- For Moonbow Theme
+-- vim.cmd([[colorscheme moonbow]]) -- Set color scheme
+
+-- For Gruvbox Material Theme
 vim.o.background = "dark" -- or "light" for light mode
 vim.cmd("let g:gruvbox_material_background= 'hard'")
 vim.cmd("let g:gruvbox_material_transparent_background=2")

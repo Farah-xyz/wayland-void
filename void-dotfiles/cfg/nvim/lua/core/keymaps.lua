@@ -25,7 +25,7 @@ map('n', '<leader>qq', ':qa!<cr>')
 map('n', '<leader>ff', ':lua require("telescope.builtin").find_files()<cr>')
 map('n', '<leader>fo', ':lua require("telescope.builtin").oldfiles()<cr>')
 -- file Exploer
-map('n', '<leader>ee', ':NvimTreeToggle<CR>')
+map('n', '<leader>ee', ':NvimTreeFindFileToggle<CR>')
 map('n', '<leader>eo', ':Oil<CR>')
 -- Buffers Management
 map('n', '<tab>', ':bn<cr>')

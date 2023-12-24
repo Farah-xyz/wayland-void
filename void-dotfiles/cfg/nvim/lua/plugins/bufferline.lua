@@ -1,7 +1,20 @@
 -----------------------------------------------------------
 -- Bufferline
 -----------------------------------------------------------
-require("barbar").setup ({
-    animation = true,
-    insert_at_start = true
-})
+require("bufferline").setup {
+      options = {
+          offsets = {
+            {
+                filetype = "NvimTree",
+                text="            FILE EXPLORER           ",
+                separator= true,
+                text_align = "left"
+            }
+          },
+          diagnostics = "nvim_lsp",
+          separator_style = {"", ""},
+          modified_icon = '●',
+          show_close_icon = false,
+          show_buffer_close_icons = false,
+      }
+}
