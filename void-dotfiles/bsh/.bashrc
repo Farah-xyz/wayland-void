@@ -107,7 +107,7 @@ alias dl-vids='yt-dlp \
     --quiet \
     --progress \
     --format "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b" \
-    --output "~/vids/%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s" \
+    --output "~/vids/programming/%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s" \
 '
 alias dl-playlist='yt-dlp \
     --downloader aria2c \
@@ -117,7 +117,7 @@ alias dl-playlist='yt-dlp \
     --quiet \
     --progress \
     --format "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b" \
-    --output "~/vids/%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s" \
+    --output "~/vids/programming/%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s" \
 '
 #####################################
 ###------- NNN File Manager ------###
@@ -128,8 +128,7 @@ export NNN_CONTEXT_COLORS="5132"
 export NNN_USE_EDITOR=1
 export NNN_TRASH=1
 export NNN_PLUG='m:nmount;M:mtpmount;n:bulknew;z:autojump;l:imgview;x:xdgdefault'
-export NNN_BMS="n:$HOME/.config/nvim;d:$HOME/.local/wayland-void/"
-
+export NNN_BMS="w:$HOME/pix/wallpapers;v:$HOME/vids/programming/;n:$HOME/.config/nvim;d:$HOME/.local/wayland-void/"
 #####################################
 ###-----Source fzf keybindingd----###
 #####################################

@@ -5,12 +5,12 @@ local opt = vim.opt   -- Set options (global/buffer/windows-scoped)
 -----------------------------------------------------------
 -- General
 -----------------------------------------------------------
-opt.background = "light"               -- or "light" for light mode
+opt.background = "light"                -- or "light" for light mode
 opt.termbidi = true                     -- For writing in right to left languages like arabic
 opt.mouse = 'a'                         -- Enable mouse support
 opt.clipboard = 'unnamedplus'           -- Copy/paste to system clipboard
 opt.swapfile = false                    -- Don't use swapfile
-opt.undofile = false                    -- disabled persistent undo
+opt.undofile = true                     -- disabled persistent undo
 opt.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete options
 -----------------------------------------------------------
 -- Neovim UI
