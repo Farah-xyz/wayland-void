@@ -23,13 +23,29 @@ require("ibl.hooks") .register(require("ibl.hooks").type.HIGHLIGHT_SETUP, functi
 end)
 
 require('ibl').setup{
-    indent = {
-        char = "│",
-        tab_char = "│",
-        highlight = highlight,
-    },
-    scope = {
-        enabled = false,
+    indent = { char = "│", tab_char = "│", highlight = highlight, },
+    scope = { enabled = false, },
+    exclude = {
+        filetypes = {
+          'lspinfo',
+          'packer',
+          'checkhealth',
+          'help',
+          'man',
+          'dashboard',
+          'git',
+          'markdown',
+          'text',
+          'terminal',
+          'NvimTree',
+        },
+
+        buftypes = {
+          'terminal',
+          'nofile',
+          'quickfix',
+          'prompt',
+        },
     },
     vim.opt.listchars:append("space: "),
 }
@@ -76,6 +92,7 @@ vim.api.nvim_create_autocmd("FileType", {
         "Trouble",
         "lazy",
         "mason",
+        "NvimTree",
         "notify",
         "toggleterm",
         "lazyterm",
