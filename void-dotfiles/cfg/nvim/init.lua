@@ -1,9 +1,7 @@
 --[[
-
 Neovim init file
 Maintainer: FARAH ABDERRAZZAK AKA LLI
 Website: https://github.com/farah-xyz/
-
 --]]
 
 -- Import Lua modules
