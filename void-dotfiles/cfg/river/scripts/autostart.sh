@@ -6,8 +6,8 @@ dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
 #==========================#
 # Background:              #
 #==========================#
-# pkill wlsunset; wlsunset -l 30 -L 120 -t 3500 -T 5000 &
 wbg ~/pix/wallpapers/FANTASY.png &
+pkill wlsunset; wlsunset &
 #==========================#
 #  APP Daemon:             #
 #==========================#
