@@ -30,6 +30,7 @@ ln -sf ~/.local/wayland-void/void-dotfiles/cfg/qt5ct ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/qt6ct ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/Kvantum ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/calcurse ~/.config/
+ln -sf ~/.local/wayland-void/void-dotfiles/cfg/lazygit ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/qutebrowser ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/user-dirs.dirs ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/prompt/starship.toml ~/.config/

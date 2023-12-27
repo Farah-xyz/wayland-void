@@ -26,6 +26,8 @@ map('n', '<leader>qq', ':qa!<cr>')
 -- Fuzzy Finder
 map('n', '<leader>ff', ':lua require("telescope.builtin").find_files()<cr>')
 map('n', '<leader>fo', ':lua require("telescope.builtin").oldfiles()<cr>')
+map('n', '<leader>fr', ':lua require("telescope.builtin").registers()<cr>')
+map('n', '<leader>ft', ':lua require("telescope.builtin").colorscheme()<cr>')
 -- file Exploer
 map('n', '<leader>ee', ':NvimTreeFindFileToggle<CR>')
 map('n', '<leader>eo', ':Oil<CR>')

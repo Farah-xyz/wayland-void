@@ -9,6 +9,12 @@ require("telescope").setup({
 		oldfiles = {
 			theme = "ivy",
 		},
+		registers = {
+			theme = "ivy",
+		},
+		colorscheme = {
+			theme = "ivy",
+		},
 		diagnostics = {
 			theme = "ivy",
 		},

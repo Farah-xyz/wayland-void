@@ -23,7 +23,7 @@ require("lazy").setup({
     { "sainnhe/gruvbox-material" },
     { "yamatsum/nvim-cursorline" },
     { "arturgoms/moonbow.nvim" },
-    { "nvim-lualine/lualine.nvim" },
+    { "nvimdev/galaxyline.nvim" },
     { "nvim-tree/nvim-tree.lua" },
     { "stevearc/oil.nvim" },
     { "nvim-telescope/telescope.nvim" },
