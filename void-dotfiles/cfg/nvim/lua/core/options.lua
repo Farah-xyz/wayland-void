@@ -28,6 +28,7 @@ opt.smartcase = true                    -- Ignore lowercase for the whole patter
 opt.linebreak = true                    -- Wrap on word boundary
 opt.wrap = false                        -- Don't wrap Line
 opt.termguicolors = true                -- Enable 24-bit RGB colors
+opt.showmode = false                    -- Disbaled [ Mode ] In Status Line
 opt.laststatus=3                        -- Set global statusline
 -----------------------------------------------------------
 -- Tabs, indent
