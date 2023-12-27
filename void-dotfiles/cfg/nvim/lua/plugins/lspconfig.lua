@@ -21,6 +21,7 @@ require("mason-lspconfig").setup{
         "tailwindcss",
         "tsserver",
         "eslint",
+        "bashls",
         "pyright",
         "lua_ls",
     },
@@ -100,6 +101,10 @@ lspconfig.eslint.setup {
     capabilities = capabilities,
 }
 lspconfig.tsserver.setup {
+    capabilities = capabilities,
+}
+-- Bash language server
+lspconfig.bashls.setup {
     capabilities = capabilities,
 }
 -- python language server

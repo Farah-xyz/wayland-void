@@ -13,9 +13,6 @@ end
 -----------------------------------------------------------
 -- Rempas leader Keys
 vim.g.mapleader = ' '
--- Remapping Escape key
-map("i", "jk", "<Esc>")
-map("v", "jk", "<Esc>")
 -- Toggle between window
 map('n', '<C-h>', '<C-w>h')
 map('n', '<C-j>', '<C-w>j')

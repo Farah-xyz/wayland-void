@@ -14,6 +14,7 @@ export MOZ_ENABLE_WAYLAND=1
 ####################################
 export TERMINAL="foot"
 export BROWSER="firefox"
+export PAGER="less"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export MYVIMRC="$HOME/.config/nvim/init.lua"
@@ -127,7 +128,7 @@ export NNN_COLORS="2136"
 export NNN_CONTEXT_COLORS="5132"
 export NNN_USE_EDITOR=1
 export NNN_TRASH=1
-export NNN_PLUG='m:nmount;M:mtpmount;n:bulknew;z:autojump;l:imgview;x:xdgdefault'
+export NNN_PLUG='m:nmount;M:mtpmount;e:suedit;n:bulknew;z:autojump;l:imgview;k:pskill;x:xdgdefault;*:togglex'
 export NNN_BMS="w:$HOME/pix/wallpapers;v:$HOME/vids/programming/;n:$HOME/.config/nvim;d:$HOME/.local/wayland-void/"
 #####################################
 ###-----Source fzf keybindingd----###
