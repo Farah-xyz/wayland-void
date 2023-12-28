@@ -34,6 +34,7 @@ map('n', '<leader>eo', ':Oil<CR>')
 -- Buffers Management
 map("n", "<Tab>", ":BufferLineCycleNext<cr>")
 map("n", "<S-Tab>", ":BufferLineCyclePrev<cr>")
+map("n", "<C-Tab>", ":BufferLinePick<cr>")
 -- Git Management
 map('n', '<leader>ga', ':Git add --all<cr>')
 map('n', '<leader>gs', ':Git status<cr>')
