@@ -29,6 +29,8 @@ ln -sf ~/.local/wayland-void/void-dotfiles/cfg/gtk-4.0 ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/qt5ct ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/qt6ct ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/Kvantum ~/.config/
+ln -sf ~/.local/wayland-void/void-dotfiles/cfg/btop ~/.config/
+ln -sf ~/.local/wayland-void/void-dotfiles/cfg/cava ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/calcurse ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/lazygit ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/qutebrowser ~/.config/

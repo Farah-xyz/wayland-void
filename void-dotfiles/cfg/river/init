@@ -68,6 +68,7 @@ riverctl border-color-urgent    0xcc241d
 #==========================#
 riverctl rule-add -app-id "mpv"              fullscreen
 riverctl rule-add -app-id "imv"              fullscreen
+riverctl rule-add -title  "cava"             fullscreen
 # Floating Rules:          #
 #==========================#
 riverctl rule-add -app-id "foot_float"       float
