@@ -16,6 +16,7 @@ opt.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete options
 -- Neovim UI
 -----------------------------------------------------------
 opt.number = true                       -- Show line number
+opt.relativenumber = true               -- Show line number Reversed
 opt.numberwidth = 4                     -- Show line number
 opt.cursorline = true                   -- highlight current line
 opt.showmatch = true                    -- Highlight matching parenthesis

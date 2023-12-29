@@ -1,12 +1,13 @@
 ####################################
 ####---------- WAYLAND ----------###
 ####################################
-export XDG_SESSION_TYPE=wayland
 export XDG_CURRENT_DESKTOP=river
-export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export XDG_SESSION_TYPE=wayland
+export GDK_BACKEND=wayland,x11
 export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_QPA_PLATFORM=wayland
-export GDK_BACKEND=wayland,x11
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export WLR_NO_HARDWARE_CURSORS=1
 export MOZ_ENABLE_WAYLAND=1
 
 ####################################
@@ -128,7 +129,8 @@ export NNN_COLORS="2136"
 export NNN_CONTEXT_COLORS="5132"
 export NNN_USE_EDITOR=1
 export NNN_TRASH=1
-export NNN_PLUG='m:nmount;M:mtpmount;e:suedit;n:bulknew;z:autojump;l:imgview;k:pskill;x:xdgdefault;*:togglex'
+export NNN_OPENER="$HOME/.config/nnn/plugins/nuke"
+export NNN_PLUG="m:nmount;M:mtpmount;e:suedit;n:bulknew;z:autojump;l:imgview;k:pskill;x:xdgdefault;*:togglex"
 export NNN_BMS="m:/run/media/$USER;M:/run/user/$UID/gvfs;w:$HOME/pix/wallpapers;v:$HOME/vids/programming/;n:$HOME/.config/nvim;d:$HOME/.local/wayland-void/"
 #####################################
 ###-----Source fzf keybindingd----###
