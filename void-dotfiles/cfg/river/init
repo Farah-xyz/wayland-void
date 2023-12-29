@@ -56,18 +56,16 @@ rivertile -view-padding 01 -outer-padding 01 -main-count 01 -main-ratio 0.6 -mai
 #==========================#
 # Borders colours:         #
 #==========================#
-riverctl background-color       0x1d2021
-riverctl border-color-focused   0xd79921
-riverctl border-color-unfocused 0x282828
-riverctl border-color-urgent    0xcc241d
+riverctl background-color                    0x1d2021
+riverctl border-color-focused                0xd79921
+riverctl border-color-unfocused              0x282828
+riverctl border-color-urgent                 0xcc241d
 
 #==========================#
 # window Rules:            #
 #==========================#
 # Fullscreen Rules:        #
 #==========================#
-riverctl rule-add -app-id "mpv"              fullscreen
-riverctl rule-add -app-id "imv"              fullscreen
 riverctl rule-add -title  "cava"             fullscreen
 # Floating Rules:          #
 #==========================#
@@ -76,6 +74,8 @@ riverctl rule-add -app-id "file_manager"     float
 riverctl rule-add -app-id "blueman-manager"  float
 riverctl rule-add -app-id "blueman-sendto"   float
 riverctl rule-add -app-id "pavucontrol"      float
+riverctl rule-add -app-id "mpv"              float
+riverctl rule-add -app-id "imv"              float
 # Dimensions Rules:         #
 #==========================#
 riverctl rule-add -app-id "foot_float"       dimensions 1200 800
@@ -83,6 +83,8 @@ riverctl rule-add -app-id "file_manager"     dimensions 1200 800
 riverctl rule-add -app-id "blueman-manager"  dimensions 800 400
 riverctl rule-add -app-id "blueman-sendto"   dimensions 1200 800
 riverctl rule-add -app-id "pavucontrol"      dimensions 800 400
+riverctl rule-add -app-id "mpv"              dimensions 1500 800
+riverctl rule-add -app-id "imv"              dimensions 1500 800
 # Position Rules:          #
 #==========================#
 riverctl rule-add -app-id "nm-applet"        position 1400 45
