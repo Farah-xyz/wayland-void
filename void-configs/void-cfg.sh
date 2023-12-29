@@ -22,6 +22,8 @@ ln -sf ~/.local/wayland-void/void-dotfiles/cfg/pcmanfm ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/nnn ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/nvim ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/mpv ~/.config/
+ln -sf ~/.local/wayland-void/void-dotfiles/cfg/yt-dlp ~/.config/
+ln -sf ~/.local/wayland-void/void-dotfiles/cfg/aria2 ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/imv ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/zathura ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/gtk-3.0 ~/.config/
