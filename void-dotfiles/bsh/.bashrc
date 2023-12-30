@@ -130,7 +130,7 @@ export NNN_OPTS='Rrcd'
 export NNN_COLORS="2136"
 export NNN_CONTEXT_COLORS="5132"
 export NNN_OPENER="$HOME/.config/nnn/plugins/nuke"
-export NNN_PLUG="m:nmount;M:mtpmount;e:suedit;n:bulknew;z:autojump;l:imgview;k:pskill;x:xdgdefault;*:togglex"
+export NNN_PLUG="m:nmount;M:mtpmount;e:suedit;n:bulknew;z:autojump;o:fzopen;l:imgview;k:pskill;x:xdgdefault;*:togglex"
 export NNN_BMS="m:/run/media/$USER;M:/run/user/$UID/gvfs;w:$HOME/pix/wallpapers;v:$HOME/vids/programming/;n:$HOME/.config/nvim;d:$HOME/.local/wayland-void/"
 #####################################
 ###-----Source fzf keybindingd----###
@@ -139,7 +139,9 @@ source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
 export FZF_DEFAULT_COMMAND="fd --type file --exclude '*.pyc'"
 export FZF_DEFAULT_OPTS="--height=90% --layout=reverse --info=inline --margin=1 --padding=1 --border=bold"
+alias run_in_nvim="fzf --multi --bind 'enter:become(nvim {+})'"
 alias run_in_mpv="fzf --multi --bind 'enter:become(mpv {+})'"
+bind '"\C-v":"run_in_nvim\n"'
 bind '"\C-p":"run_in_mpv\n"'
 #####################################
 ###-------Tab Completions --------###
