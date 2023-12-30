@@ -129,8 +129,10 @@ export NNN_TRASH=1
 export NNN_OPTS='Rrcd'
 export NNN_COLORS="2136"
 export NNN_CONTEXT_COLORS="5132"
+export NNN_TERMINAL="foot"
+export NNN_FIFO="/tmp/nnn.fifo"
 export NNN_OPENER="$HOME/.config/nnn/plugins/nuke"
-export NNN_PLUG="m:nmount;M:mtpmount;e:suedit;n:bulknew;z:autojump;o:fzopen;l:imgview;k:pskill;x:xdgdefault;*:togglex"
+export NNN_PLUG="m:nmount;M:mtpmount;e:suedit;n:bulknew;z:autojump;o:fzopen;l:imgview;k:pskill;p:preview-tui;x:xdgdefault;*:togglex"
 export NNN_BMS="m:/run/media/$USER;M:/run/user/$UID/gvfs;w:$HOME/pix/wallpapers;v:$HOME/vids/programming/;n:$HOME/.config/nvim;d:$HOME/.local/wayland-void/"
 #####################################
 ###-----Source fzf keybindingd----###
