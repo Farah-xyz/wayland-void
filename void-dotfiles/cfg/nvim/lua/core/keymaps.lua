@@ -11,30 +11,31 @@ end
 -----------------------------------------------------------
 -- Neovim shortcuts
 -----------------------------------------------------------
--- Rempas leader Keys
+-- Rempas leader keys
 vim.g.mapleader = ' '
+-- Disbaled keys in normal mode
+map('n', '<Space>',    "<nop>")
+map('n', '<Up>',       "<nop>")
+map('n', '<Down>',     "<nop>")
+map('n', '<Right>',    "<nop>")
+map('n', '<left>',     "<nop>")
 -- Toggle between window
-map('n', '<C-h>', '<C-w>h')
-map('n', '<C-j>', '<C-w>j')
-map('n', '<C-k>', '<C-w>k')
-map('n', '<C-l>', '<C-w>l')
--- Unhighlight searched elements
-map("n", "<leader>hl", ":nohlsearch<cr>")
--- Fast saving & Quite Nvim
-map('n', '<leader>ww', ':w<cr>')
-map('n', '<leader>qq', ':qa!<cr>')
+map('n', '<C-h>',      "<C-w>h")
+map('n', '<C-j>',      "<C-w>j")
+map('n', '<C-k>',      "<C-w>k")
+map('n', '<C-l>',      "<C-w>l")
 -- Fuzzy Finder
-map('n', '<leader>ff', ':lua require("telescope.builtin").find_files()<cr>')
-map('n', '<leader>fo', ':lua require("telescope.builtin").oldfiles()<cr>')
-map('n', '<leader>fr', ':lua require("telescope.builtin").registers()<cr>')
-map('n', '<leader>ft', ':lua require("telescope.builtin").colorscheme()<cr>')
+map('n', '<leader>ff', ":lua require('telescope.builtin').find_files()<cr>")
+map('n', '<leader>fo', ":lua require('telescope.builtin').oldfiles()<cr>")
+map('n', '<leader>fr', ":lua require('telescope.builtin').registers()<cr>")
+map('n', '<leader>ft', ":lua require('telescope.builtin').colorscheme()<cr>")
 -- file Exploer
-map('n', '<leader>ee', ':NvimTreeFindFileToggle<CR>')
-map('n', '<leader>eo', ':Oil<CR>')
+map('n', '<leader>ee', ":NvimTreeFindFileToggle<CR>")
+map('n', '<leader>eo', ":Oil<CR>")
 -- Buffers Management
-map("n", "<Tab>", ":BufferLineCycleNext<cr>")
-map("n", "<S-Tab>", ":BufferLineCyclePrev<cr>")
-map("n", "<C-Tab>", ":BufferLinePick<cr>")
+map("n", "<Tab>",      ":BufferLineCycleNext<cr>")
+map("n", "<S-Tab>",    ":BufferLineCyclePrev<cr>")
+map("n", "<C-Tab>",    ":BufferLinePick<cr>")
 -- Git Management
 map('n', '<leader>ga', ':Git add --all<cr>')
 map('n', '<leader>gs', ':Git status<cr>')
