@@ -93,6 +93,7 @@ alias flat-all-remove="flatpak uninstall -y --all --delete-data --noninteractive
 alias poweroff="doas poweroff"
 alias shutdown="doas shutdown"
 alias reboot="doas reboot"
+alias zzz="doas zzz"
 ## for configs File
 alias dots="cd ~/.local/wayland-void/"
 alias nvimc="nvim ~/.config/nvim/init.lua"
@@ -101,32 +102,15 @@ alias footc="nvim ~/.config/foot/foot.ini"
 alias bashc="nvim ~/.bashrc"
 alias starc="nvim ~/.config/starship.toml"
 # yt-dlp Alias
-alias dl-vids='yt-dlp \
-    --downloader aria2c \
-    --no-playlist \
-    --no-warnings \
-    --ignore-errors \
-    --quiet \
-    --progress \
-    --format "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b" \
-    --output "~/vids/programming/%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s" \
-'
-alias dl-playlist='yt-dlp \
-    --downloader aria2c \
-    --yes-playlist \
-    --no-warnings \
-    --ignore-errors \
-    --quiet \
-    --progress \
-    --format "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b" \
-    --output "~/vids/programming/%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s" \
-'
+alias yt-music="yt-dlp --config-locations $HOME/.config/yt-dlp/music"
+alias yt-vedio="yt-dlp --config-locations $HOME/.config/yt-dlp/config"
+alias yt-vedioCC="yt-dlp --config-locations $HOME/.config/yt-dlp/video-cc"
 #####################################
 ###------- NNN File Manager ------###
 #####################################
 export NNN_USE_EDITOR=1
 export NNN_TRASH=1
-export NNN_OPTS='Rrcd'
+export NNN_OPTS='RUrcd'
 export NNN_COLORS="2136"
 export NNN_CONTEXT_COLORS="5132"
 export NNN_TERMINAL="foot"

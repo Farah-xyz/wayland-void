@@ -1,5 +1,5 @@
 # Set download to best video and audio
--f '(bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio)'
+--format "(bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio)"
 
 # Write subtitle file to disk
 --embed-subs
@@ -20,10 +20,22 @@
 --downloader aria2c
 
 # Arguments to aria2c
---external-downloader-args aria2c:'-c -j 3 -x 3 -s 3 -k 1M'
+--external-downloader-args aria2c:"-c -j 3 -x 3 -s 3 -k 1M"
 
 # Use sponsorblock to remove most of the segments
 --sponsorblock-remove default
 
+# Ignore download and postprocessing errors
+--ignore-errors
+
+# Ignore warnings
+--no-warnings
+
+# Activate quiet mode. If used with --verbose,
+--quiet
+
+# Show progress bar, even if in quiet mode
+--progress
+
 # Output to CC video folder
--o ~/vids/CC\ Videos/%(title)s.%(ext)s
+--output "~/vids/programming_CC/%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s"

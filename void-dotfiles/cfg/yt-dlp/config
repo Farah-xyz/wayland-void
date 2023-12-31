@@ -1,5 +1,5 @@
 # Set download to best video and audio
---format '(bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio)'
+--format "(bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio)"
 
 # Merge output format as mp4
 --merge-output-format mp4
@@ -11,7 +11,7 @@
 --downloader aria2c
 
 # Arguments to aria2c
---external-downloader-args aria2c:'-c -j 3 -x 3 -s 3 -k 1M'
+--external-downloader-args aria2c:"-c -j 3 -x 3 -s 3 -k 1M"
 
 # Ignore download and postprocessing errors
 --ignore-errors
