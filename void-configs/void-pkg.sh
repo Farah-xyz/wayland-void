@@ -12,4 +12,4 @@ sudo xbps-install -Sy base-devel xtools mesa-dri vulkan-loader mesa-vulkan-intel
     xdg-user-dirs xdg-utils bash-completion opendoas starship btop \
     qt5-wayland qt6-wayland qt5ct qt6ct kvantum flatpak \
     rust nodejs python3 python3-pip python3-devel \
-    acl-progs bind-utils
+    atool psmisc acl-progs bind-utils
