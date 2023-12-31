@@ -44,7 +44,7 @@ echo "===============> In ~/ <==================="
 ln -sf ~/.local/wayland-void/void-dotfiles/pix/wallpapers ~/
 ln -sf ~/.local/wayland-void/void-dotfiles/bsh/.bashrc ~/
 ln -sf ~/.local/wayland-void/void-dotfiles/bsh/.bash_profile ~/
-ln -sf ~/.local/wayland-void/void-dotfiles/bsh/.npmrc ~/
+ln -sf ~/.local/wayland-void/void-dotfiles/others/.npmrc ~/
 ln -sf ~/.local/wayland-void/void-dotfiles/git/.gitconfig ~/
 
 echo "#########################################"
