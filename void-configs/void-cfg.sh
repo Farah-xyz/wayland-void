@@ -14,11 +14,9 @@ ln -sf ~/.local/wayland-void/void-dotfiles/bin ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/river ~/.config/ && chmod +x ~/.config/river/init
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/waybar ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/foot ~/.config/
+ln -sf ~/.local/wayland-void/void-dotfiles/cfg/wezterm ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/fnott ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/fuzzel ~/.config/
-ln -sf ~/.local/wayland-void/void-dotfiles/cfg/lxterminal ~/.config/
-ln -sf ~/.local/wayland-void/void-dotfiles/cfg/libfm ~/.config/
-ln -sf ~/.local/wayland-void/void-dotfiles/cfg/pcmanfm ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/nnn ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/nvim ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/mpv ~/.config/

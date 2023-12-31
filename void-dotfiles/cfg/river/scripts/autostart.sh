@@ -11,7 +11,7 @@ pkill wlsunset; wlsunset &
 #==========================#
 #  APP Daemon              #
 #==========================#
-pkill udiskie; udiskie --smart-tray --notify --file-manager=pcmanfm --terminal=lxterminal &
+pkill udiskie; udiskie --smart-tray --notify --file-manager=spacefm --terminal=wezterm &
 pkill waybar; waybar &
 pipewire &
 pipewire-pulse &
