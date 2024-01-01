@@ -25,6 +25,7 @@ export MYVIMRC="$HOME/.config/nvim/init.lua"
 #####################################
 export IPYTHONDIR="$HOME/.cache/ipython_config"
 export JUPYTER_CONFIG_DIR="$HOME/.cache/jupyter_config"
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/rc"
 
 #####################################
 ###--------- SHELL OPTIONS -------###
