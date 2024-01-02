@@ -40,144 +40,144 @@ riverctl keyboard-layout -options "caps:escape,grp:alt_altgr_toggle" "us,ara"
 riverctl set-repeat 50 200
 # Touchpad:                #
 #==========================#
-riverctl input $touchpad tap                 enabled
-riverctl input $touchpad events              enabled
-riverctl input $touchpad natural-scroll      disabled
-riverctl input $touchpad accel-profile       adaptive
-riverctl input $touchpad pointer-accel       0.5
+riverctl input $touchpad tap                      enabled
+riverctl input $touchpad events                   enabled
+riverctl input $touchpad natural-scroll           disabled
+riverctl input $touchpad accel-profile            adaptive
+riverctl input $touchpad pointer-accel            0.5
 
 #==========================#
 # Misc configurations:     #
 #==========================#
-riverctl border-width                        3
-riverctl set-cursor-warp                     on-focus-change
-riverctl focus-follows-cursor                always
-riverctl hide-cursor timeout                 5000
-riverctl hide-cursor when-typing             enabled
-riverctl xcursor-theme                       "hicolor" 15
+riverctl border-width                             3
+riverctl set-cursor-warp                          on-focus-change
+riverctl focus-follows-cursor                     always
+riverctl hide-cursor timeout                      5000
+riverctl hide-cursor when-typing                  enabled
+riverctl xcursor-theme                            "hicolor" 15
 
 #==========================#
 # Borders colours:         #
 #==========================#
-riverctl background-color                    0x1d2021
-riverctl border-color-focused                0xd79921
-riverctl border-color-unfocused              0x282828
-riverctl border-color-urgent                 0xcc241d
+riverctl background-color                         0x1d2021
+riverctl border-color-focused                     0xd79921
+riverctl border-color-unfocused                   0x282828
+riverctl border-color-urgent                      0xcc241d
 
 #==========================#
 # window Rules:            #
 #==========================#
 # Fullscreen Rules:        #
 #==========================#
-riverctl rule-add -title  "Library"          fullscreen
+riverctl rule-add -title  "Library"               fullscreen
 # Floating Rules:          #
 #==========================#
-riverctl rule-add -app-id "foot_float"       float
-riverctl rule-add -app-id "termbidi_float"   float
-riverctl rule-add -app-id "file_manager_cli" float
-riverctl rule-add -app-id "blueman-manager"  float
-riverctl rule-add -app-id "blueman-sendto"   float
-riverctl rule-add -app-id "pavucontrol"      float
-riverctl rule-add -app-id "mpv"              float
-riverctl rule-add -app-id "imv"              float
+riverctl rule-add -app-id "foot_float"            float
+riverctl rule-add -app-id "termbidi_float"        float
+riverctl rule-add -app-id "file_manager_cli"      float
+riverctl rule-add -app-id "blueman-manager"       float
+riverctl rule-add -app-id "blueman-sendto"        float
+riverctl rule-add -app-id "pavucontrol"           float
+riverctl rule-add -app-id "mpv"                   float
+riverctl rule-add -app-id "imv"                   float
 # Dimensions Rules:         #
 #==========================#
-riverctl rule-add -app-id "foot_float"       dimensions 1200 800
-riverctl rule-add -app-id "termbidi_float"   dimensions 1200 800
-riverctl rule-add -app-id "file_manager_cli" dimensions 1200 800
-riverctl rule-add -app-id "blueman-manager"  dimensions 800 400
-riverctl rule-add -app-id "blueman-sendto"   dimensions 1200 800
-riverctl rule-add -app-id "pavucontrol"      dimensions 800 400
-riverctl rule-add -app-id "mpv"              dimensions 1500 800
-riverctl rule-add -app-id "imv"              dimensions 1500 800
+riverctl rule-add -app-id "foot_float"            dimensions 1200 800
+riverctl rule-add -app-id "termbidi_float"        dimensions 1200 800
+riverctl rule-add -app-id "file_manager_cli"      dimensions 1200 800
+riverctl rule-add -app-id "blueman-manager"       dimensions 800 400
+riverctl rule-add -app-id "blueman-sendto"        dimensions 1200 800
+riverctl rule-add -app-id "pavucontrol"           dimensions 800 400
+riverctl rule-add -app-id "mpv"                   dimensions 1500 800
+riverctl rule-add -app-id "imv"                   dimensions 1500 800
 # Position Rules:          #
 #==========================#
-riverctl rule-add -app-id "nm-applet"        position 1400 45
-riverctl rule-add -app-id "blueman-manager"  position 1115 45
-riverctl rule-add -app-id "pavucontrol"      position 1115 45
+riverctl rule-add -app-id "nm-applet"             position 1400 45
+riverctl rule-add -app-id "blueman-manager"       position 1115 45
+riverctl rule-add -app-id "pavucontrol"           position 1115 45
 # Tags Rules:              #
 #==========================#
-riverctl rule-add -app-id "*qutebrowser*"    tags 4
-riverctl rule-add -app-id "pcmanfm"          tags 16
+riverctl rule-add -app-id "*qutebrowser*"         tags 4
+riverctl rule-add -app-id "pcmanfm"               tags 16
 # Others Rules:            #
 #==========================#
-riverctl rule-add -app-id "Firefox"          ssd
-riverctl rule-add -app-id "*wezterm"         ssd
+riverctl rule-add -app-id "Firefox"               ssd
+riverctl rule-add -app-id "*wezterm"              ssd
 
 #==========================#
 # Key Bindings:            #
 #==========================#
 # Programme Bindings:      #
 #==========================#
-riverctl map normal $mod Return        spawn $terminal
-riverctl map normal $mod Backslash     spawn $termbidi
-riverctl map normal $mod+Shift   W     spawn $browser_VI
-riverctl map normal $mod   W           spawn $browser
-riverctl map normal $mod   D           spawn $menu
-riverctl map normal $mod   P           spawn $file_manager_gui
-riverctl map normal $mod   N           spawn "$termbidi start --class file_manager_cli $file_manager_cli"
-riverctl map normal $mod+Shift Return  spawn "$terminal --app-id=foot_float"
-riverctl map normal $mod+Shift Backslash spawn "$termbidi start --class termbidi_float"
-riverctl map normal $mod+Control P     spawn "$HOME/.local/wayland-void/void-dotfiles/cfg/river/scripts/powerMenu.sh"
-riverctl map normal $mod+Control R     spawn "$HOME/.config/river/init"
+riverctl map normal $mod Return                   spawn  $terminal
+riverctl map normal $mod Backslash                spawn  $termbidi
+riverctl map normal $mod+Shift   W                spawn  $browser_VI
+riverctl map normal $mod   W                      spawn  $browser
+riverctl map normal $mod   D                      spawn  $menu
+riverctl map normal $mod   P                      spawn  $file_manager_gui
+riverctl map normal $mod   N                      spawn  "$termbidi start --class file_manager_cli $file_manager_cli"
+riverctl map normal $mod+Shift Return             spawn  "$terminal --app-id=foot_float"
+riverctl map normal $mod+Shift Backslash          spawn  "$termbidi start --class termbidi_float"
+riverctl map normal $mod+Control P                spawn  "$HOME/.local/wayland-void/void-dotfiles/cfg/river/scripts/powerMenu.sh"
+riverctl map normal $mod+Control R                spawn  "$HOME/.config/river/init"
 # Screenshoot Binding:     #
 #==========================#
-riverctl map normal $mod Print         spawn "shotman --copy --capture output"
-riverctl map normal $mod+Shift Print   spawn "shotman --copy --capture region"
+riverctl map normal $mod Print                    spawn "shotman --copy --capture output"
+riverctl map normal $mod+Shift Print              spawn "shotman --copy --capture region"
 # Window Bindings:         #
 #==========================#
-riverctl map normal $mod+Control Q     exit
-riverctl map normal $mod+Shift C       close
-riverctl map normal $mod+Shift Space   toggle-float
-riverctl map normal $mod F             toggle-fullscreen
-riverctl map normal $mod H             focus-view left
-riverctl map normal $mod L             focus-view right
-riverctl map normal $mod K             focus-view up
-riverctl map normal $mod J             focus-view down
-riverctl map normal $mod+Shift H       swap       left
-riverctl map normal $mod+Shift L       swap       right
-riverctl map normal $mod+Shift K       swap       up
-riverctl map normal $mod+Shift J       swap       down
-riverctl map normal $mod Period        focus-view next
-riverctl map normal $mod Comma         focus-view previous
-riverctl map normal $mod+Shift Period  swap       next
-riverctl map normal $mod+Shift Comma   swap       previous
-riverctl map normal $mod S             zoom
+riverctl map normal $mod+Control Q                exit
+riverctl map normal $mod+Shift C                  close
+riverctl map normal $mod+Shift Space              toggle-float
+riverctl map normal $mod F                        toggle-fullscreen
+riverctl map normal $mod H                        focus-view left
+riverctl map normal $mod L                        focus-view right
+riverctl map normal $mod K                        focus-view up
+riverctl map normal $mod J                        focus-view down
+riverctl map normal $mod+Shift H                  swap       left
+riverctl map normal $mod+Shift L                  swap       right
+riverctl map normal $mod+Shift K                  swap       up
+riverctl map normal $mod+Shift J                  swap       down
+riverctl map normal $mod Period                   focus-view next
+riverctl map normal $mod Comma                    focus-view previous
+riverctl map normal $mod+Shift Period             swap       next
+riverctl map normal $mod+Shift Comma              swap       previous
+riverctl map normal $mod S                        zoom
 # Window Floating Bidings: #
 #==========================#
-riverctl map -repeat normal $mod4 H move left 100
-riverctl map -repeat normal $mod4 J move down 100
-riverctl map -repeat normal $mod4 K move up 100
-riverctl map -repeat normal $mod4 L move right 100
-riverctl map -repeat normal $mod4+Shift H snap left
-riverctl map -repeat normal $mod4+Shift J snap down
-riverctl map -repeat normal $mod4+Shift K snap up
-riverctl map -repeat normal $mod4+Shift L snap right
-riverctl map -repeat normal $mod4+Control H resize horizontal -100
-riverctl map -repeat normal $mod4+Control J resize vertical 100
-riverctl map -repeat normal $mod4+Control K resize vertical -100
-riverctl map -repeat normal $mod4+Control L resize horizontal 100
+riverctl map -repeat normal $mod4 H               move left 100
+riverctl map -repeat normal $mod4 J               move down 100
+riverctl map -repeat normal $mod4 K               move up 100
+riverctl map -repeat normal $mod4 L               move right 100
+riverctl map -repeat normal $mod4+Shift H         snap left
+riverctl map -repeat normal $mod4+Shift J         snap down
+riverctl map -repeat normal $mod4+Shift K         snap up
+riverctl map -repeat normal $mod4+Shift L         snap right
+riverctl map -repeat normal $mod4+Control H       resize horizontal -100
+riverctl map -repeat normal $mod4+Control J       resize vertical 100
+riverctl map -repeat normal $mod4+Control K       resize vertical -100
+riverctl map -repeat normal $mod4+Control L       resize horizontal 100
 # Mouse Binding:           #
 #==========================#
-riverctl map-pointer normal $mod BTN_LEFT   move-view
-riverctl map-pointer normal $mod BTN_RIGHT  resize-view
-riverctl map-pointer normal $mod BTN_MIDDLE zoom
+riverctl map-pointer normal $mod BTN_LEFT         move-view
+riverctl map-pointer normal $mod BTN_RIGHT        resize-view
+riverctl map-pointer normal $mod BTN_MIDDLE       zoom
 riverctl map-pointer normal $mod+Shift BTN_MIDDLE toggle-float
 # Tags Binding:            #
 #==========================#
 for i in $(seq 1 9)
 do
     tags=$((1 << ($i - 1)))
-    riverctl map normal $mod $i set-focused-tags $tags
-    riverctl map normal $mod+Shift $i set-view-tags $tags
-    riverctl map normal $mod+Control $i toggle-focused-tags $tags
-    riverctl map normal $mod+Shift+Control $i toggle-view-tags $tags
+    riverctl map normal $mod $i                   set-focused-tags $tags
+    riverctl map normal $mod+Shift $i             set-view-tags $tags
+    riverctl map normal $mod+Control $i           toggle-focused-tags $tags
+    riverctl map normal $mod+Shift+Control $i     toggle-view-tags $tags
 done
 all_tags=$(((1 << 32) - 1))
-riverctl map normal $mod 0 set-focused-tags $all_tags     # Super+0 to focus all tags
-riverctl map normal $mod+Shift 0 set-view-tags $all_tags  # Super+Shift+0 to tag focused view with all tags
-riverctl map normal $mod Tab  focus-previous-tags
-riverctl map normal $mod+Shift Tab send-to-previous-tags
+riverctl map normal $mod 0                        set-focused-tags $all_tags
+riverctl map normal $mod+Shift 0                  set-view-tags $all_tags
+riverctl map normal $mod Tab                      focus-previous-tags
+riverctl map normal $mod+Shift Tab                send-to-previous-tags
 # Meltimedia Binding:      #
 #==========================#
 for mode in normal locked
@@ -193,16 +193,16 @@ do
 done
 # Mode Binding:            #
 #==========================#
-riverctl declare-mode passthrough
-riverctl map normal $mod F11 enter-mode passthrough
-riverctl map passthrough $mod F11 enter-mode normal
+riverctl declare-mode                             passthrough
+riverctl map normal $mod F11                      enter-mode passthrough
+riverctl map passthrough $mod F11                 enter-mode normal
 # Layouts Binding:         #
 #==========================#
-riverctl map -repeat normal $mod+Control H send-layout-cmd rivertile "main-ratio -0.05"
-riverctl map -repeat normal $mod+Control L send-layout-cmd rivertile "main-ratio +0.05"
-riverctl map normal $mod+Control Comma     send-layout-cmd rivertile "main-count +1"
-riverctl map normal $mod+Control Period    send-layout-cmd rivertile "main-count -1"
-riverctl map normal $mod+Control Up        send-layout-cmd rivertile "main-location top"
-riverctl map normal $mod+Control Right     send-layout-cmd rivertile "main-location right"
-riverctl map normal $mod+Control Down      send-layout-cmd rivertile "main-location bottom"
-riverctl map normal $mod+Control Left      send-layout-cmd rivertile "main-location left"
+riverctl map -repeat normal $mod+Control H        send-layout-cmd rivertile "main-ratio -0.05"
+riverctl map -repeat normal $mod+Control L        send-layout-cmd rivertile "main-ratio +0.05"
+riverctl map normal $mod+Control Comma            send-layout-cmd rivertile "main-count +1"
+riverctl map normal $mod+Control Period           send-layout-cmd rivertile "main-count -1"
+riverctl map normal $mod+Control Up               send-layout-cmd rivertile "main-location top"
+riverctl map normal $mod+Control Right            send-layout-cmd rivertile "main-location right"
+riverctl map normal $mod+Control Down             send-layout-cmd rivertile "main-location bottom"
+riverctl map normal $mod+Control Left             send-layout-cmd rivertile "main-location left"
