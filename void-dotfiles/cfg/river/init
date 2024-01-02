@@ -54,6 +54,7 @@ riverctl set-cursor-warp                     on-focus-change
 riverctl focus-follows-cursor                always
 riverctl hide-cursor timeout                 5000
 riverctl hide-cursor when-typing             enabled
+riverctl xcursor-theme                       "hicolor" 15
 
 #==========================#
 # Borders colours:         #
@@ -101,6 +102,7 @@ riverctl rule-add -app-id "pcmanfm"          tags 16
 # Others Rules:            #
 #==========================#
 riverctl rule-add -app-id "Firefox"          ssd
+riverctl rule-add -app-id "*wezterm"         ssd
 
 #==========================#
 # Key Bindings:            #

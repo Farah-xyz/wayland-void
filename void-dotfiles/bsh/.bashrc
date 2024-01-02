@@ -74,7 +74,7 @@ alias gl="g log"
 alias gp="g push -uf origin main"
 alias lg="lazygit"
 # Img Viewr libsixel
-alias sx="img2sixel --width=20% --height=20%"
+alias sx="img2sixel --width=40% --height=30%"
 alias sxl="lsix"
 alias sxg="imv"
 ## Xbps Pkg Manager

@@ -1,10 +1,14 @@
 local wezterm = require 'wezterm';
 return {
 -----------------------------------------------------------
--- For Support right to left languages like arabic
+-- Ararbic Support:
 -----------------------------------------------------------
   bidi_enabled = true,
   bidi_direction = "LeftToRight",
+-----------------------------------------------------------
+-- Wayland Configurations:
+-----------------------------------------------------------
+  enable_wayland = true,
 -----------------------------------------------------------
 -- Fonts Configurations:
 -----------------------------------------------------------
@@ -38,7 +42,8 @@ return {
 -- Window Configurations:
 -----------------------------------------------------------
   window_background_opacity = 1.0,
-  window_decorations = "TITLE | RESIZE",
+  window_close_confirmation = "NeverPrompt",
+  window_decorations = "NONE",
   window_padding = {
     left = 15,
     right = 15,
