@@ -36,7 +36,7 @@ return {
   colors = {
 		indexed = {[16] = "#F8BD96", [17] = "#F5E0DC"},
 		split = "#161320",
-		visual_bell = "#302D41",
+		visual_bell = "#282828",
    },
 -----------------------------------------------------------
 -- Window Configurations:
@@ -63,6 +63,18 @@ return {
   scrollback_lines = 5000,
   enable_scroll_bar = false,
   check_for_updates = false,
+-----------------------------------------------------------
+-- Animation Configurations:
+-----------------------------------------------------------
+  animation_fps = 1,
+  cursor_blink_ease_in = 'Constant',
+  cursor_blink_ease_out = 'Constant',
+  visual_bell = {
+      fade_in_function = 'EaseIn',
+      fade_in_duration_ms = 150,
+      fade_out_function = 'EaseOut',
+      fade_out_duration_ms = 150,
+  },
 -----------------------------------------------------------
 -- Keybidings Configurations:
 -----------------------------------------------------------
