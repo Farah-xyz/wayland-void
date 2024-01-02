@@ -134,14 +134,14 @@ riverctl map normal $mod H                        focus-view left
 riverctl map normal $mod L                        focus-view right
 riverctl map normal $mod K                        focus-view up
 riverctl map normal $mod J                        focus-view down
-riverctl map normal $mod+Shift H                  swap       left
-riverctl map normal $mod+Shift L                  swap       right
-riverctl map normal $mod+Shift K                  swap       up
-riverctl map normal $mod+Shift J                  swap       down
+riverctl map normal $mod+Shift H                  swap left
+riverctl map normal $mod+Shift L                  swap right
+riverctl map normal $mod+Shift K                  swap up
+riverctl map normal $mod+Shift J                  swap down
 riverctl map normal $mod Period                   focus-view next
 riverctl map normal $mod Comma                    focus-view previous
-riverctl map normal $mod+Shift Period             swap       next
-riverctl map normal $mod+Shift Comma              swap       previous
+riverctl map normal $mod+Shift Period             swap next
+riverctl map normal $mod+Shift Comma              swap previous
 riverctl map normal $mod S                        zoom
 # Window Floating Bidings: #
 #==========================#
