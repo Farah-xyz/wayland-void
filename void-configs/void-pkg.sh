@@ -9,7 +9,7 @@ sudo xbps-install -Sy base-devel xtools mesa-dri vulkan-loader mesa-vulkan-intel
     NetworkManager network-manager-applet \
     bluez libspa-bluetooth blueman \
     pipewire wireplumber alsa-pipewire pavucontrol \
-    xdg-user-dirs xdg-utils bash-completion opendoas starship btop \
+    xdg-user-dirs xdg-utils bash-completion opendoas starship neofetch onefetch btop \
     qt5-wayland qt6-wayland qt5ct qt6ct kvantum flatpak \
     rust nodejs python3 python3-pip python3-devel \
     atool psmisc acl-progs bind-utils
