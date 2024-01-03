@@ -1,6 +1,6 @@
 #!/bin/sh
 sudo xbps-install -Sy base-devel xtools mesa-dri vulkan-loader mesa-vulkan-intel intel-video-accel \
-    wayland xorg-server-xwayland elogind river wlr-randr lswt wbg waylock Waybar swayidle \
+    wayland xorg-server-xwayland elogind river kanshi wlr-randr lswt wbg waylock Waybar swayidle \
     qutebrowser firefox foot wezterm fuzzel shotman swappy fnott obs xdg-desktop-portal-wlr \
     font-awesome dejavu-fonts-ttf noto-fonts-ttf noto-fonts-ttf-extra noto-fonts-cjk noto-fonts-emoji \
     spacefm nnn udiskie imv mpv yt-dlp aria2 ffmpeg libsixel-util zathura zathura-pdf-mupdf \

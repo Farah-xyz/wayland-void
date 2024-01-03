@@ -12,6 +12,7 @@ echo "#########################################"
 echo "===========> In ~/.config <================"
 ln -sf ~/.local/wayland-void/void-dotfiles/bin ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/river ~/.config/ && chmod +x ~/.config/river/init
+ln -sf ~/.local/wayland-void/void-dotfiles/cfg/kanshi ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/waybar ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/foot ~/.config/
 ln -sf ~/.local/wayland-void/void-dotfiles/cfg/wezterm ~/.config/
