@@ -4,15 +4,18 @@
 #==========================#
 dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
 #==========================#
-# Background:              #
+# Background Daemon:       #
 #==========================#
 wbg ~/pix/wallpapers/FANTASY.png &
-# pkill wlsunset; wlsunset &
+wlsunset &
+#==========================#
+# output Daemon:           #
+#==========================#
+kanshi &
 #==========================#
 #  APP Daemon              #
 #==========================#
-pkill udiskie; udiskie --smart-tray --notify --file-manager=spacefm --terminal=wezterm &
-pkill waybar; waybar &
+udiskie --smart-tray --notify --file-manager=spacefm --terminal=wezterm &
 pipewire &
 pipewire-pulse &
 blueman-applet &
