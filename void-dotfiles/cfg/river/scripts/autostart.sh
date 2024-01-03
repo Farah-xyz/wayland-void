@@ -9,11 +9,11 @@ dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
 wbg ~/pix/wallpapers/FANTASY.png &
 wlsunset &
 #==========================#
-# output Daemon:           #
+# Output Daemon:           #
 #==========================#
 kanshi &
 #==========================#
-#  APP Daemon              #
+#  App Daemon              #
 #==========================#
 udiskie --smart-tray --notify --file-manager=spacefm --terminal=wezterm &
 pipewire &

@@ -43,7 +43,7 @@ return {
 -----------------------------------------------------------
   window_background_opacity = 1.0,
   window_close_confirmation = "NeverPrompt",
-  window_decorations = "NONE",
+  window_decorations = "RESIZE | TITLE",
   window_padding = {
     left = 15,
     right = 15,

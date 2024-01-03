@@ -102,7 +102,6 @@ riverctl rule-add -app-id "pcmanfm"               tags 16
 # Others Rules:            #
 #==========================#
 riverctl rule-add -app-id "Firefox"               ssd
-riverctl rule-add -app-id "*wezterm"              ssd
 
 #==========================#
 # Key Bindings:            #
