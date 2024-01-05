@@ -4,7 +4,7 @@ return {
 -- Ararbic Support:
 -----------------------------------------------------------
   bidi_enabled = true,
-  bidi_direction = "LeftToRight",
+  bidi_direction = "AutoLeftToRight",
 -----------------------------------------------------------
 -- Wayland Configurations:
 -----------------------------------------------------------
