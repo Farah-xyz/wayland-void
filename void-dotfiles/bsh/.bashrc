@@ -95,14 +95,14 @@ alias poweroff="doas poweroff"
 alias shutdown="doas shutdown"
 alias reboot="doas reboot"
 alias zzz="doas zzz"
-## for configs File
+## For Configs Files
 alias dots="cd ~/.local/wayland-void/"
 alias nvimc="nvim ~/.config/nvim/init.lua"
 alias riverc="nvim ~/.config/river/init"
 alias footc="nvim ~/.config/foot/foot.ini"
 alias bashc="nvim ~/.bashrc"
 alias starc="nvim ~/.config/starship.toml"
-# yt-dlp Alias
+# Yt-dlp Configs Files
 alias yt-music="yt-dlp --config-locations $HOME/.config/yt-dlp/music"
 alias yt-vedio="yt-dlp --config-locations $HOME/.config/yt-dlp/config"
 alias yt-vedioCC="yt-dlp --config-locations $HOME/.config/yt-dlp/video-cc"
