@@ -12,7 +12,7 @@ return {
 -----------------------------------------------------------
 -- Fonts Configurations:
 -----------------------------------------------------------
-  font = wezterm.font("JetBrainsMono NF", {weight="Medium", stretch="Normal", style="Normal"}),
+  -- font = wezterm.font("JetBrainsMono NF", {weight="Medium", stretch="Normal", style="Normal"}),
   font_size = 11.0,
   font_rules = {
     {
