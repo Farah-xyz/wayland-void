@@ -1,15 +1,15 @@
 #=============================================
-# MY HP ELITEBOOK LAPTOP:
+# MY HP ELITEBOOK 840r G4 LAPTOP :
 #=============================================
 profile Laptop {
 	output eDP-1 position 0,0 mode 1920x1080
-    exec sh -c "pkill waybar || waybar --config $HOME/.config/waybar/config --style $HOME/.config/waybar/style.css"
+    exec sh -c "pkill waybar; waybar --config $HOME/.config/waybar/config --style $HOME/.config/waybar/style.css"
 }
 #=============================================
-# LAPTOP WITH SECOND MONITOR:
+# LAPTOP WITH SECOND MONITOR AKA DESKTOP:
 #=============================================
-profile Dock {
+profile Desktop {
 	output HDMI-A-1 position 0,0 mode 1920x1080
 	output eDP-1 position 1920,0 mode 1920x1080
-    exec sh -c "pkill waybar || waybar --config $HOME/.config/waybar/config --style $HOME/.config/waybar/style.css"
+    exec sh -c "pkill waybar; waybar --config $HOME/.config/waybar/config --style $HOME/.config/waybar/style.css"
 }

@@ -98,7 +98,6 @@ riverctl rule-add -app-id "pavucontrol"           position 1115 45
 # Tags Rules:              #
 #==========================#
 riverctl rule-add -app-id "*qutebrowser*"         tags 4
-riverctl rule-add -app-id "pcmanfm"               tags 16
 # Others Rules:            #
 #==========================#
 riverctl rule-add -app-id "Firefox"               ssd

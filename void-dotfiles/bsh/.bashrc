@@ -106,6 +106,9 @@ alias starc="nvim ~/.config/starship.toml"
 alias yt-music="yt-dlp --config-locations $HOME/.config/yt-dlp/music"
 alias yt-vedio="yt-dlp --config-locations $HOME/.config/yt-dlp/config"
 alias yt-vedioCC="yt-dlp --config-locations $HOME/.config/yt-dlp/video-cc"
+# wifi Perso
+alias G="nmcli device wifi connect E8:81:75:0A:37:B8  password E881750A37B8"
+alias Ghz="nmcli device wifi connect 08:5A:11:6E:BA:A0 password 085A116EBAA0"
 #####################################
 ###------- NNN File Manager ------###
 #####################################
