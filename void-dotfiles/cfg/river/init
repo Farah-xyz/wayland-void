@@ -121,8 +121,7 @@ riverctl map normal $mod+Control P                spawn  "$HOME/.local/wayland-v
 riverctl map normal $mod+Control R                spawn  "$HOME/.config/river/init"
 # Screenshoot Binding:     #
 #==========================#
-riverctl map normal $mod Print                    spawn "shotman --copy --capture output"
-riverctl map normal $mod+Shift Print              spawn "shotman --copy --capture region"
+riverctl map normal $mod Print                    spawn  "$HOME/.config/river/scripts/screenShoot.sh"
 # Window Bindings:         #
 #==========================#
 riverctl map normal $mod+Control Q                exit
