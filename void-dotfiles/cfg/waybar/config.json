@@ -1,6 +1,6 @@
 {
     // ======================= Waybar configuration =============================== //
-    "modules-left": ["custom/launcher", "river/tags", "river/mode"],
+    "modules-left": ["custom/launcher", "river/tags", "custom/wf-recorder", "river/mode"],
     "modules-center": ["clock"],
     "modules-right": ["idle_inhibitor", "pulseaudio", "backlight", "battery", "tray", "custom/power"],
 
@@ -84,6 +84,15 @@
         "on-click": "fuzzel",
         "on-click-right": "pkill fuzzel"
     },
+    // == Show Screen Recorder ==//
+    "custom/wf-recorder": {
+        "format": " ",
+        "return-type": "json",
+        "interval": 1,
+        "exec": "echo '{\"class\": \"recording\"}'",
+        "exec-if": "pgrep wf-recorder",
+        "on-click": "killall -s SIGINT wf-recorder && notify-send \"  Recording Complete\"",
+      },
     // == Show Power Manager ==//
     "custom/power": {
           "format": "  {}",

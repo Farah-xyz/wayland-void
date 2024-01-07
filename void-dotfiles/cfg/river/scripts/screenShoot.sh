@@ -13,10 +13,10 @@ options+="$screenshot_copy_area\n"
 options+="$screenshot_area_to_file\n"
 options+="$screenshot_area_and_edit\n"
 
-# Prompt the user with wofi.
+# Prompt the user with fuzzel.
 choice="$(echo -e "$options" | fuzzel --dmenu --lines 5)"
 
-# # Make sure that all pictures are saved in the screenshots folder.
+## Make sure that all pictures are saved in the screenshots folder.
 path="$HOME/pix/screenshots/"
 
 case $choice in

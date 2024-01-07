@@ -122,6 +122,7 @@ riverctl map normal $mod+Control R                spawn  "$HOME/.config/river/in
 # Screenshoot Binding:     #
 #==========================#
 riverctl map normal $mod Print                    spawn  "$HOME/.config/river/scripts/screenShoot.sh"
+riverctl map normal $mod+Shift Print              spawn  "$HOME/.config/river/scripts/screenRecored.sh"
 # Window Bindings:         #
 #==========================#
 riverctl map normal $mod+Control Q                exit

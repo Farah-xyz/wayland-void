@@ -25,6 +25,7 @@ window#waybar {
 #battery,
 #tray,
 #custom-launcher,
+#custom-wf-recorder,
 #custom-power {
   background-color: #1d2021;
   border: 3px solid;
@@ -119,4 +120,9 @@ window#waybar {
 #custom-launcher {
     color: #89871a;
     padding: 0 20px;
+}
+#custom-wf-recorder {
+    padding: 0 20px;
+    color: #cc241d;
+    background-color: #282828;
 }
