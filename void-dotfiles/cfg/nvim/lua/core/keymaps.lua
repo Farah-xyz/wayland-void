@@ -24,6 +24,11 @@ map('n', '<C-h>',      "<C-w>h")
 map('n', '<C-j>',      "<C-w>j")
 map('n', '<C-k>',      "<C-w>k")
 map('n', '<C-l>',      "<C-w>l")
+-- Movment Down And Up
+map('n', '<C-d>',      "<C-d>zz")
+map('n', '<C-u>',      "<C-u>zz")
+map('n', '<C-f>',      "<C-f>zt")
+map('n', '<C-b>',      "<C-b>zb")
 -- Fuzzy Finder
 map('n', '<leader>ff', ":lua require('telescope.builtin').find_files()<cr>")
 map('n', '<leader>fo', ":lua require('telescope.builtin').oldfiles()<cr>")
