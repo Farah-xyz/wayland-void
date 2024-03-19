@@ -1,0 +1,100 @@
+" -----------------------------------------------------------------------------
+" Zathura settings
+" -----------------------------------------------------------------------------
+" Colors
+set notification-error-bg       "#1d2021" # bg
+set notification-error-fg       "#fb4934" # bright:red
+set notification-warning-bg     "#1d2021" # bg
+set notification-warning-fg     "#fabd2f" # bright:yellow
+set notification-bg             "#1d2021" # bg
+set notification-fg             "#b8bb26" # bright:green
+
+set completion-bg               "#504945" # bg2
+set completion-fg               "#ebdbb2" # fg
+set completion-group-bg         "#3c3836" # bg1
+set completion-group-fg         "#928374" # gray
+set completion-highlight-bg     "#83a598" # bright:blue
+set completion-highlight-fg     "#504945" # bg2
+
+# Define the color in index mode
+set index-bg                    "#504945" # bg2
+set index-fg                    "#ebdbb2" # fg
+set index-active-bg             "#83a598" # bright:blue
+set index-active-fg             "#504945" # bg2
+
+set inputbar-bg                 "#1d2021" # bg
+set inputbar-fg                 "#ebdbb2" # fg
+
+set statusbar-bg                "#504945" # bg2
+set statusbar-fg                "#ebdbb2" # fg
+
+set highlight-color             "#fabd2f" # bright:yellow
+set highlight-active-color      "#fe8019" # bright:orange
+
+set default-bg                  "#1d2021" # bg
+set default-fg                  "#ebdbb2" # fg
+set render-loading              true
+set render-loading-bg           "#1d2021" # bg
+set render-loading-fg           "#ebdbb2" # fg
+
+# Recolor book content's color
+set recolor-lightcolor          "#1d2021" # bg
+set recolor-darkcolor           "#ebdbb2" # fg
+set recolor                     "true"
+set recolor-keephue              true      # keep original color
+
+" Clipboard
+set selection-clipboard clipboard
+
+" Search
+set incremental-search true
+set search-hadjust true
+
+" Autoadjust
+set adjust-open width
+
+" Typography
+set font "JetBrains Mono Nerd Font"
+
+" -----------------------------------------------------------------------------
+" Zathura mappings
+" -----------------------------------------------------------------------------
+
+" Zoom in/out
+map [normal]     z zoom in
+map [normal]     Z zoom out
+map [fullscreen] z zoom in
+map [fullscreen] Z zoom out
+
+" Toggle mode
+map [normal]     D toggle_page_mode
+map [fullscreen] D toggle_page_mode
+
+" Scroll
+map [normal]     u scroll half-up
+map [normal]     d scroll half-down
+map [fullscreen] u scroll half-up
+map [fullscreen] d scroll half-down
+
+" Fullscreen
+map [normal]     f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+" Reload
+map [normal]     <C-r> reload
+map [fullscreen] <C-r> reload
+
+" Status bar
+map [normal]     b toggle_statusbar
+map [fullscreen] b toggle_statusbar
+
+" Set width as in mupdf
+map [normal]     H adjust_window best-fit
+map [normal]     W adjust_window width
+map [fullscreen] H adjust_window best-fit
+map [fullscreen] W adjust_window width
+
+map [normal]     i set recolor
+map [fullscreen] i set recolor
+
+" vim: ft=vim

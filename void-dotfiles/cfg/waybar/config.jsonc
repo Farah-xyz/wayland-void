@@ -1,0 +1,102 @@
+{
+    // ======================= Waybar configuration =============================== //
+    "modules-left": ["custom/launcher", "river/tags", "custom/wf-recorder", "river/mode"],
+    "modules-center": ["clock"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "backlight", "battery", "tray", "custom/power"],
+
+    // ======================= Modules configuration =============================== //
+    // == River Tags & Icons ==/
+    "river/tags": {
+        "num-tags": 5,
+        "tag-labels" : ["¹一", "²二", "³三", "⁴四", "⁵五", "⁶六", "⁷七", "⁸八", "⁹九", "十"]
+    },
+    //== Show Mode River WM ==//
+    "river/mode": {
+        "format": "mode: {}",
+    },
+    // == Show Language Keyboard in River WM ==//
+    "river/language": {
+        "format": "  {} ",
+        "format-en": "us",
+        "format-ar": "ar",
+        "keyboard-name": "at-translated-set-2-keyboard"
+    },
+    // == Show Status Idle ==//
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        },
+        "start-activated": true,
+    },
+    // == Show System Tray ==//
+    "tray": {
+        "spacing": 10
+    },
+    // == Show Clock ==//
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+         "format": "{:%H:%M}  ",
+         "format-alt": "{:%A, %B %d, %Y}  "
+    },
+    // == Show Light ==//
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": [" ", " "],
+        "on-scroll-up": "doas brightnessctl set +5%",
+        "on-scroll-down": "doas brightnessctl set 5%-"
+    },
+    // == Show Level Battery ==//
+    "battery": {
+        "states": { "warning": 30, "critical": 15 },
+        "format": "{icon} {capacity}%",
+        "tooltip-format": "{timeTo}, {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": " ",
+        "format-alt": "{time} {icon}",
+        "format-icons": [" ", " ", " ", " ", " "],
+    },
+    // == Show Volume ==//
+    "pulseaudio": {
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{icon} {volume}% {format_source}",
+        "format-bluetooth-muted": "  {volume}% {format_source}",
+        "format-source": " ",
+        "format-source-muted": " ",
+        "format-muted": "  {format_source}",
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [" ", " "]
+        },
+        "tooltip-format": "{desc}, {volume}%",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-click-middle": "pavucontrol"
+    },
+    // == Fuzzel Launcher Applications ==//
+    "custom/launcher":{
+        "format": " ",
+        "on-click": "fuzzel",
+        "on-click-right": "pkill fuzzel"
+    },
+    // == Show Screen Recorder ==//
+    "custom/wf-recorder": {
+        "format": " ",
+        "return-type": "json",
+        "interval": 1,
+        "exec": "echo '{\"class\": \"recording\"}'",
+        "exec-if": "pgrep wf-recorder",
+        "on-click": "killall -s SIGINT wf-recorder",
+      },
+    // == Show Power Manager ==//
+    "custom/power": {
+          "format": "  {}",
+          "on-click": "bash ~/.config/river/scripts/powerMenu.sh"
+    },
+},

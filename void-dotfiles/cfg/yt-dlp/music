@@ -1,0 +1,26 @@
+# Extract only the audio
+-x
+
+# Prefer free formats
+--prefer-free-formats
+
+# SponsorBlock used to remove non-music
+--sponsorblock-remove default
+
+# Use aria2c as the downloader
+--downloader aria2c
+
+# Arguments to aria2c
+--external-downloader-args aria2c:"-c -j 3 -x 3 -s 3 -k 1M"
+
+# Set download format as best audio
+--format "bestaudio"
+
+# Use mp3 format
+--audio-format mp3
+
+# Download The whole playlist
+--yes-playlist
+
+# Send download to music folder
+--output "~/music/%(uploader)s/%(title)s.%(ext)s"

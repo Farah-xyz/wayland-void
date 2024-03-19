@@ -1,0 +1,127 @@
+/*  All Selector */
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-family: "JetBrains Mono Nerd Font", "Font Awesome 6 Free";
+  font-size: 14px;
+  font-weight:Bold;
+  font-style:Italic;
+}
+/* Waybar Css */
+window#waybar {
+  background-color: rgb(29, 32, 33);
+  color: #ebdbb2;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+/* Group All Modules */
+#tags,
+#mode,
+#clock,
+#idle_inhibitor,
+#pulseaudio,
+#backlight,
+#battery,
+#tray,
+#custom-launcher,
+#custom-wf-recorder,
+#custom-power {
+  background-color: #1d2021;
+  border: 3px solid;
+  box-shadow: 1px 1px 3px 1px;
+  border-radius: 8px;
+  background-origin: border-box;
+  background-clip: padding-box;
+  padding: 0 15px;
+  margin: 2px 4px 8px 4px;
+}
+
+/*  Module Left */
+#tags {
+    color: #d79921;
+}
+#tags button {
+    color: #fabd2f;
+    margin-left:-10px;
+}
+#tags button.occupied {
+    color:#98971a;
+}
+#tags button.focused {
+    color: #d65d0e;
+}
+#tags button.urgent {
+    color: #9d0006;
+}
+#mode{
+    color: #458588;
+
+}
+#mode.normal{
+  background-color: transparent;
+  color:transparent;
+}
+
+/*  Module Center */
+#clock {
+    color:#689d6a;
+}
+
+/* Module Right */
+#idle_inhibitor {
+    color: #189984;
+    padding: 0 20px;
+}
+#idle_inhibitor.activated {
+  color: #8ec07c;
+}
+#pulseaudio {
+  color: #458588;
+}
+#pulseaudio.muted {
+  color: #cc241d;
+}
+#backlight {
+  color: #b16286;
+}
+#battery {
+  color: #d65d0e;
+  padding: 0 20px;
+}
+#battery.charging, #battery.plugged {
+  background-color: #1d2021;
+}
+/* Animation battery */
+@keyframes blink {
+    to {
+        background-color: #1d2021;
+        color: #9d0006;
+    }
+}
+#battery.critical:not(.charging) {
+    background-color: #d90006;
+    color: #1d2021;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#tray {
+    padding: 0 20px;
+}
+
+/*  My Coustom Module */
+#custom-power {
+    color: #cc241d;
+}
+#custom-launcher {
+    color: #89871a;
+    padding: 0 20px;
+}
+#custom-wf-recorder {
+    padding: 0 20px;
+    color: #cc241d;
+    background-color: #282828;
+}

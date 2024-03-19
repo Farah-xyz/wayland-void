@@ -1,0 +1,5 @@
+# Delta as custom pager
+git:
+  paging:
+    colorArg: always
+    pager: bat --decorations=never --color=always --italic-text=always --theme=gruvbox-dark

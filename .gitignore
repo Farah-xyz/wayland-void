@@ -1,0 +1,24 @@
+# Auto Generate
+void-dotfiles/cfg/qutebrowser/autoconfig.yml
+void-dotfiles/cfg/qutebrowser/quickmarks
+void-dotfiles/cfg/qutebrowser/greasemonkey/
+void-dotfiles/cfg/qutebrowser/bookmarks/
+void-dotfiles/cfg/mpv/watch_later/
+void-dotfiles/cfg/nnn/bookmarks/
+void-dotfiles/cfg/nnn/sessions/
+void-dotfiles/cfg/nnn/mounts/
+void-dotfiles/cfg/nnn/.selection
+void-dotfiles/music/.moc/cache/
+void-dotfiles/music/.moc/pid
+void-dotfiles/music/.moc/last_directory
+void-dotfiles/music/.moc/cache/tags.db
+void-dotfiles/music/.moc/cache/moc_version_tag
+void-dotfiles/music/.moc/equalizer
+void-dotfiles/music/.moc/softmixer
+void-dotfiles/music/.moc/playlist.m3u
+
+# Byte-compiled / optimized / DLL files
+lazy-lock.json
+__pycache__/
+*.pyc
+*.py[cod]
