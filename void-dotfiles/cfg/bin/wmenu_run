@@ -32,4 +32,4 @@ path() {
 	fi
 }
 
-path | wmenu -if "JetBrains Mono Nerd Font 12" -p "RUN APP: " -N 1d2021 -n ebdbb2 -M 689d6a -m 1d2021 -S 689d6a -s 1d2021 "$@" | ${SHELL:-"/bin/sh"} &
+path | wmenu -if "JetBrainsMono Nerd Font 12" -p "RUN PROGRAMME: " -N 1d2021 -n ebdbb2 -M 689d6a -m 1d2021 -S 689d6a -s 1d2021 "$@" | ${SHELL:-"/bin/sh"} &
