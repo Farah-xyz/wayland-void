@@ -6,7 +6,7 @@ recorder_area="AREA OF DISPLAY"
 options=$(printf "$recorder_all\n$recorder_area")
 
 # Prompt the user with fuzzel
-choice="$(echo -e "$options" | wmenu -il 2 -f "JetBrains Mono Nerd Font 12" -p "RECORDE: " -N 1d2021 -n ebdbb2 -M 689d6a -m 1d2021 -S 689d6a -s 1d2021)"
+choice="$(echo -e "$options" | wmenu -il 2 -f "JetBrains Mono Nerd Font 12" -p "TAKE RECORDE: " -N 1d2021 -n ebdbb2 -M 689d6a -m 1d2021 -S 689d6a -s 1d2021)"
 
 case $choice in
     $recorder_all)
