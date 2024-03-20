@@ -17,7 +17,7 @@ constexpr ColorScheme colorActive = {Color(0x1d, 0x20, 0x21), Color(0x68, 0x9d, 
 constexpr const char* termcmd[] = {"foot", nullptr};
 
 /* static std::vector<std::string> tagNames = { "1", "2", "3", "4", "5", "6", "7", "8", "9", }; */
-static std::vector<std::string> tagNames = {"", "", "", "", ""};
+static std::vector<std::string> tagNames = {"", "", "", "", "", ""};
 constexpr Button buttons[] = {
 	{ ClkStatusText,   BTN_RIGHT,  spawn,      {.v = termcmd} },
 };
