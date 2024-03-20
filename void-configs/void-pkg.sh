@@ -33,7 +33,7 @@ sudo xbps-install -Sy \
     gptfdisk parted gparted lvm2 udiskie simple-mtpfs \
     gvfs gvfs-mtp gvfs-smb gvfs-afc gvfs-gphoto2 \
     # NETWORKING TOOLS:
-    NetworkManager network-manager-applet ufw linux-wifi-hotspot \
+    NetworkManager network-manager-applet ModemManager ufw linux-wifi-hotspot \
     net-tools wireless_tools bind-utils iputils inetutils-telnet ethtool nmap tcpdump \
     # SCHEDULE & TASK TOOLS:
     at cronie dcron \

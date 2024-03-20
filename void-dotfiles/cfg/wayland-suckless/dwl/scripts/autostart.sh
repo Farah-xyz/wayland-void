@@ -8,6 +8,7 @@ wbg ~/pix/wallpapers/WITCHER.png &
 #==========================#
 fnott &
 udiskie &
+nm-applet &
 someblocks &
 pipewire &
 pipewire-pulse &

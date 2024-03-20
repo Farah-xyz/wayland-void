@@ -20,7 +20,7 @@ static const char cursortheme[]             = "Bibata-Modern-Amber";
 static const unsigned int cursorsize        = 24;
 
 /* tagging - TAGCOUNT must be no greater than 31 */
-#define TAGCOUNT (5)
+#define TAGCOUNT (6)
 
 /* logging */
 static int log_level = WLR_ERROR;
@@ -38,8 +38,8 @@ static const Rule rules[] = {
 	/* examples:
 	{ "Gimp",     NULL,        0,           1,              1,            0,         1,         -1      0,  0, 1000, 0.75 },
 	*/
-	{ "Firefox",   NULL,       1 << 2,      1,               0,            0,         0,        -1,     0,  0, 0,    0 },
-	{"qutebrowser",NULL,       1 << 2,      1,               0,            0,         0,        -1,     0,  0, 0,    0 },
+	{ "Firefox",   NULL,       1 << 3,      1,               0,            0,         0,        -1,     0,  0, 0,    0 },
+	{"qutebrowser",NULL,       1 << 3,      1,               0,            0,         0,        -1,     0,  0, 0,    0 },
 	{ "foot",      NULL,       0,           0,               0,            1,         1,        -1,     0,  0, 0,    0 },
 	{ "wezterm",   NULL,       0,           0,               0,            1,         1,        -1,     0,  0, 0,    0 },
 	{ "foot_float",NULL,       0,           0,               1,            1,         1,        -1,     0,  0, 1000, 0.75 },
